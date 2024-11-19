@@ -1,17 +1,163 @@
-import { BARBARIAN, DRUID, WARLOCK, WIZARD } from '@/typings/class'
+import { BARBARIAN, DRUID, FIGHTER, RANGER, BARD, WARLOCK, WIZARD } from '@/typings/class'
 import type {
-  DoubleAxe,
+  Axe,
   SilverWeapon,
   CrystalBall,
   CyclopsVisionCrystal,
   ManaSphere,
+  Sword,
+  Polearm,
+  Shield,
+  Dagger,
+  Staff,
+  IceFang,
 } from '@/typings/equip'
 
-export const DOUBLE_AXES: (DoubleAxe | SilverWeapon)[] = [
+export const ARMING_SWORDS: Sword[] = [
+  {
+    name: 'Arming Sword',
+    rarity: 0,
+    src: new URL('@/assets/weapons/arming_sword/45px-Arming_Sword_1.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage_low: 29,
+    physical_weapon_damage_high: 29,
+    class: [FIGHTER, RANGER, BARD],
+  },
+  {
+    name: 'Arming Sword',
+    rarity: 1,
+    src: new URL('@/assets/weapons/arming_sword/45px-Arming_Sword_2.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage_low: 30,
+    physical_weapon_damage_high: 31,
+    class: [FIGHTER, RANGER, BARD],
+  },
+  {
+    name: 'Arming Sword',
+    rarity: 2,
+    src: new URL('@/assets/weapons/arming_sword/45px-Arming_Sword_3.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage_low: 32,
+    physical_weapon_damage_high: 33,
+    class: [FIGHTER, RANGER, BARD],
+  },
+  {
+    name: 'Arming Sword',
+    rarity: 3,
+    src: new URL('@/assets/weapons/arming_sword/45px-Arming_Sword_4.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage_low: 34,
+    physical_weapon_damage_high: 35,
+    class: [FIGHTER, RANGER, BARD],
+  },
+  {
+    name: 'Arming Sword',
+    rarity: 4,
+    src: new URL('@/assets/weapons/arming_sword/45px-Arming_Sword_5.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage_low: 36,
+    physical_weapon_damage_high: 37,
+    class: [FIGHTER, RANGER, BARD],
+  },
+  {
+    name: 'Arming Sword',
+    rarity: 5,
+    src: new URL('@/assets/weapons/arming_sword/45px-Arming_Sword_6.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage_low: 38,
+    physical_weapon_damage_high: 39,
+    class: [FIGHTER, RANGER, BARD],
+  },
+  {
+    name: 'Arming Sword',
+    rarity: 7,
+    src: new URL("@/assets/weapons/arming_sword/45px-Kuma's_Claw.png", import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage_low: 40,
+    physical_weapon_damage_high: 41,
+    class: [FIGHTER, RANGER, BARD],
+  },
+]
+
+export const BARDICHES: Polearm[] = [
+  {
+    name: 'Bardiche',
+    rarity: 0,
+    src: new URL('@/assets/weapons/bardiche/90px-Bardiche_1.png', import.meta.url),
+    move_speed_reduction: 45,
+    physical_weapon_damage_low: 48,
+    physical_weapon_damage_high: 48,
+    class: [BARBARIAN, WARLOCK],
+  },
+  {
+    name: 'Bardiche',
+    rarity: 1,
+    src: new URL('@/assets/weapons/bardiche/90px-Bardiche_2.png', import.meta.url),
+    move_speed_reduction: 45,
+    physical_weapon_damage_low: 49,
+    physical_weapon_damage_high: 52,
+    class: [BARBARIAN, WARLOCK],
+  },
+  {
+    name: 'Bardiche',
+    rarity: 2,
+    src: new URL('@/assets/weapons/bardiche/90px-Bardiche_3.png', import.meta.url),
+    move_speed_reduction: 45,
+    physical_weapon_damage_low: 53,
+    physical_weapon_damage_high: 56,
+    class: [BARBARIAN, WARLOCK],
+  },
+  {
+    name: 'Bardiche',
+    rarity: 3,
+    src: new URL('@/assets/weapons/bardiche/90px-Bardiche_4.png', import.meta.url),
+    move_speed_reduction: 45,
+    physical_weapon_damage_low: 57,
+    physical_weapon_damage_high: 60,
+    class: [BARBARIAN, WARLOCK],
+  },
+  {
+    name: 'Bardiche',
+    rarity: 4,
+    src: new URL('@/assets/weapons/bardiche/90px-Bardiche_5.png', import.meta.url),
+    move_speed_reduction: 45,
+    physical_weapon_damage_low: 61,
+    physical_weapon_damage_high: 64,
+    class: [BARBARIAN, WARLOCK],
+  },
+  {
+    name: 'Bardiche',
+    rarity: 5,
+    src: new URL('@/assets/weapons/bardiche/90px-Bardiche_6.png', import.meta.url),
+    move_speed_reduction: 45,
+    physical_weapon_damage_low: 65,
+    physical_weapon_damage_high: 68,
+    class: [BARBARIAN, WARLOCK],
+  },
+  {
+    name: 'Bardiche',
+    rarity: 6,
+    src: new URL('@/assets/weapons/bardiche/90px-Bardiche_6.png', import.meta.url),
+    move_speed_reduction: 45,
+    physical_weapon_damage_low: 69,
+    physical_weapon_damage_high: 72,
+    class: [BARBARIAN, WARLOCK],
+  },
+]
+
+export const BATTLE_AXES: Axe[] = []
+
+export const BUCKLERS: Shield[] = []
+
+export const CASTILLION_DAGGERS: (Dagger | IceFang)[] = []
+
+export const CEREMONIAL_STAFFS: Staff[] = []
+
+export const DOUBLE_AXES: (Axe | SilverWeapon)[] = [
   {
     name: 'Double Axe',
     rarity: 0,
-    src: new URL('/public/assets/weapons/double_axe/90px-Double_Axe_1.png', import.meta.url),
+    src: new URL('@/assets/weapons/double_axe/90px-Double_Axe_1.png', import.meta.url),
     move_speed_reduction: 35,
     physical_weapon_damage_low: 51,
     physical_weapon_damage_high: 51,
@@ -20,7 +166,7 @@ export const DOUBLE_AXES: (DoubleAxe | SilverWeapon)[] = [
   {
     name: 'Double Axe',
     rarity: 1,
-    src: new URL('/public/assets/weapons/double_axe/90px-Double_Axe_2.png', import.meta.url),
+    src: new URL('@/assets/weapons/double_axe/90px-Double_Axe_2.png', import.meta.url),
     move_speed_reduction: 35,
     physical_weapon_damage_low: 52,
     physical_weapon_damage_high: 54,
@@ -29,7 +175,7 @@ export const DOUBLE_AXES: (DoubleAxe | SilverWeapon)[] = [
   {
     name: 'Double Axe',
     rarity: 2,
-    src: new URL('/public/assets/weapons/double_axe/90px-Double_Axe_3.png', import.meta.url),
+    src: new URL('@/assets/weapons/double_axe/90px-Double_Axe_3.png', import.meta.url),
     move_speed_reduction: 35,
     physical_weapon_damage_low: 55,
     physical_weapon_damage_high: 57,
@@ -38,7 +184,7 @@ export const DOUBLE_AXES: (DoubleAxe | SilverWeapon)[] = [
   {
     name: 'Double Axe',
     rarity: 3,
-    src: new URL('/public/assets/weapons/double_axe/90px-Double_Axe_4.png', import.meta.url),
+    src: new URL('@/assets/weapons/double_axe/90px-Double_Axe_4.png', import.meta.url),
     move_speed_reduction: 35,
     physical_weapon_damage_low: 58,
     physical_weapon_damage_high: 60,
@@ -47,7 +193,7 @@ export const DOUBLE_AXES: (DoubleAxe | SilverWeapon)[] = [
   {
     name: 'Double Axe',
     rarity: 4,
-    src: new URL('/public/assets/weapons/double_axe/90px-Double_Axe_5.png', import.meta.url),
+    src: new URL('@/assets/weapons/double_axe/90px-Double_Axe_5.png', import.meta.url),
     move_speed_reduction: 35,
     physical_weapon_damage_low: 61,
     physical_weapon_damage_high: 63,
@@ -56,7 +202,7 @@ export const DOUBLE_AXES: (DoubleAxe | SilverWeapon)[] = [
   {
     name: 'Double Axe',
     rarity: 5,
-    src: new URL('/public/assets/weapons/double_axe/90px-Double_Axe_6.png', import.meta.url),
+    src: new URL('@/assets/weapons/double_axe/90px-Double_Axe_6.png', import.meta.url),
     move_speed_reduction: 35,
     physical_weapon_damage_low: 64,
     physical_weapon_damage_high: 66,
@@ -65,7 +211,7 @@ export const DOUBLE_AXES: (DoubleAxe | SilverWeapon)[] = [
   {
     name: 'Life After Death',
     rarity: 6,
-    src: new URL('/public/assets/weapons/double_axe/90px-Life_after_Death.png', import.meta.url),
+    src: new URL('@/assets/weapons/double_axe/90px-Life_after_Death.png', import.meta.url),
     move_speed_reduction: 35,
     physical_weapon_damage_low: 68,
     physical_weapon_damage_high: 70,
@@ -74,7 +220,7 @@ export const DOUBLE_AXES: (DoubleAxe | SilverWeapon)[] = [
   {
     name: 'Sterling Axe',
     rarity: 2,
-    src: new URL('/public/assets/weapons/double_axe/90px-Sterling_Axe.png', import.meta.url),
+    src: new URL('@/assets/weapons/double_axe/90px-Sterling_Axe.png', import.meta.url),
     move_speed_reduction: 35,
     undead_damage_bonus: 15,
     physical_weapon_damage_low: 52,
@@ -84,10 +230,7 @@ export const DOUBLE_AXES: (DoubleAxe | SilverWeapon)[] = [
   {
     name: 'Axe of Righteousness',
     rarity: 3,
-    src: new URL(
-      '/public/assets/weapons/double_axe/90px-Axe_of_Righteousness.png',
-      import.meta.url,
-    ),
+    src: new URL('@/assets/weapons/double_axe/90px-Axe_of_Righteousness.png', import.meta.url),
     move_speed_reduction: 35,
     undead_damage_bonus: 15,
     physical_weapon_damage_low: 56,
@@ -97,7 +240,7 @@ export const DOUBLE_AXES: (DoubleAxe | SilverWeapon)[] = [
   {
     name: 'Divine Axe',
     rarity: 4,
-    src: new URL('/public/assets/weapons/double_axe/90px-Divine_Axe.png', import.meta.url),
+    src: new URL('@/assets/weapons/double_axe/90px-Divine_Axe.png', import.meta.url),
     move_speed_reduction: 35,
     undead_damage_bonus: 15,
     physical_weapon_damage_low: 60,
@@ -110,7 +253,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
   {
     name: 'Crystal Ball',
     rarity: 0,
-    src: new URL('/public/assets/weapons/crystal_ball/90px-Crystal_Ball_1.png', import.meta.url),
+    src: new URL('@/assets/weapons/crystal_ball/90px-Crystal_Ball_1.png', import.meta.url),
     move_speed_reduction: 15,
     magical_damage: 2,
     addition_physical_weapon_damage: 1,
@@ -120,7 +263,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
   {
     name: 'Crystal Ball',
     rarity: 1,
-    src: new URL('/public/assets/weapons/crystal_ball/90px-Crystal_Ball_2.png', import.meta.url),
+    src: new URL('@/assets/weapons/crystal_ball/90px-Crystal_Ball_2.png', import.meta.url),
     move_speed_reduction: 15,
     magical_damage: 3,
     addition_physical_weapon_damage: 1,
@@ -130,7 +273,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
   {
     name: 'Crystal Ball',
     rarity: 2,
-    src: new URL('/public/assets/weapons/crystal_ball/90px-Crystal_Ball_3.png', import.meta.url),
+    src: new URL('@/assets/weapons/crystal_ball/90px-Crystal_Ball_3.png', import.meta.url),
     move_speed_reduction: 15,
     magical_damage: 4,
     addition_physical_weapon_damage: 2,
@@ -140,7 +283,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
   {
     name: 'Crystal Ball',
     rarity: 3,
-    src: new URL('/public/assets/weapons/crystal_ball/90px-Crystal_Ball_4.png', import.meta.url),
+    src: new URL('@/assets/weapons/crystal_ball/90px-Crystal_Ball_4.png', import.meta.url),
     move_speed_reduction: 15,
     magical_damage: 5,
     addition_physical_weapon_damage: 2,
@@ -150,7 +293,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
   {
     name: 'Crystal Ball',
     rarity: 4,
-    src: new URL('/public/assets/weapons/crystal_ball/90px-Crystal_Ball_5.png', import.meta.url),
+    src: new URL('@/assets/weapons/crystal_ball/90px-Crystal_Ball_5.png', import.meta.url),
     move_speed_reduction: 15,
     magical_damage: 6,
     addition_physical_weapon_damage: 2,
@@ -160,7 +303,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
   {
     name: 'Crystal Ball',
     rarity: 5,
-    src: new URL('/public/assets/weapons/crystal_ball/90px-Crystal_Ball_6.png', import.meta.url),
+    src: new URL('@/assets/weapons/crystal_ball/90px-Crystal_Ball_6.png', import.meta.url),
     move_speed_reduction: 15,
     magical_damage: 7,
     addition_physical_weapon_damage: 3,
@@ -170,7 +313,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
   {
     name: "Zirkzi's Eye",
     rarity: 6,
-    src: new URL("/public/assets/weapons/crystal_ball/90px-Zirkzi's_Eye.png", import.meta.url),
+    src: new URL("@/assets/weapons/crystal_ball/90px-Zirkzi's_Eye.png", import.meta.url),
     move_speed_reduction: 15,
     magical_damage: 8,
     addition_physical_weapon_damage: 3,
@@ -180,10 +323,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
   {
     name: 'Cyclops Vision Crystal',
     rarity: 4,
-    src: new URL(
-      '/public/assets/weapons/crystal_ball/90px-Cyclops_Vision_Crystal.png',
-      import.meta.url,
-    ),
+    src: new URL('@/assets/weapons/crystal_ball/90px-Cyclops_Vision_Crystal.png', import.meta.url),
     move_speed_reduction: 15,
     magical_damage: 6,
     addition_physical_weapon_damage: 2,
@@ -196,7 +336,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
   {
     name: 'Mana Sphere',
     rarity: 4,
-    src: new URL('/public/assets/weapons/crystal_ball/90px-Mana_Sphere.png', import.meta.url),
+    src: new URL('@/assets/weapons/crystal_ball/90px-Mana_Sphere.png', import.meta.url),
     move_speed_reduction: 15,
     magical_damage: 6,
     addition_physical_weapon_damage: 2,

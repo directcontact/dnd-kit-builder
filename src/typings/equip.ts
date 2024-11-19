@@ -8,9 +8,50 @@ export interface Weapon {
   class: Class[]
 }
 
-export interface DoubleAxe extends Weapon {
+export interface Sword extends Weapon {
   physical_weapon_damage_low: number
   physical_weapon_damage_high: number
+}
+
+export interface Polearm extends Weapon {
+  physical_weapon_damage_low: number
+  physical_weapon_damage_high: number
+}
+
+export interface Axe extends Weapon {
+  physical_weapon_damage_low: number
+  physical_weapon_damage_high: number
+}
+
+export interface Bow extends Weapon {
+  physical_weapon_damage_low: number
+  physical_weapon_damage_high: number
+  armor_penetration: number
+}
+
+export interface Crossbow extends Weapon {
+  physical_weapon_damage_low: number
+  physical_weapon_damage_high: number
+  armor_penetration: number
+}
+
+export interface Staff extends Weapon {
+  physical_weapon_damage_low: number
+  physical_weapon_damage_high: number
+  magical_healing_add: number
+  magical_damage: number
+  magic_penetration: number
+}
+
+export interface Spellbook extends Weapon {
+  magical_damage: number
+  magic_penetration: number
+}
+
+export interface Dagger extends Weapon {
+  physical_weapon_damage_low: number
+  physical_weapon_damage_high: number
+  armor_penetration: number
 }
 
 export interface CrystalBall extends Weapon {
@@ -21,6 +62,10 @@ export interface CrystalBall extends Weapon {
 
 export interface FlangedMace extends Weapon {
   armor_penetration: 15
+}
+
+export interface IceFang extends Dagger {
+  true_physical_damage: number
 }
 
 export interface CyclopsVisionCrystal extends CrystalBall {
@@ -49,6 +94,11 @@ export interface SilverWeapon extends Weapon {
 export interface Shield extends Weapon {
   armor_rating_low: number
   armor_rating_high: number
+}
+
+export interface LanternShield extends Shield {
+  physical_weapon_damage_low: number
+  physical_weapon_damage_high: number
 }
 
 export interface Armor {
