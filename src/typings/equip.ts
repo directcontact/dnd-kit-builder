@@ -1,4 +1,5 @@
 import type { Class } from './class'
+import type { Slot } from './slot'
 
 export interface Weapon {
   name: string
@@ -6,6 +7,7 @@ export interface Weapon {
   src: URL
   move_speed_reduction: number
   class: Class[]
+  slot: Slot
 }
 
 export interface Sword extends Weapon {
@@ -74,6 +76,18 @@ export interface LanternShield extends Shield {
 export interface Armor {
   name: string
   armor_rating: number[]
+}
+
+export interface DemonsGlee extends Sword {
+  magical_weapon_damage: number
+}
+
+export interface TrollsBane extends Mace {
+  max_health_bonus: number[]
+}
+
+export interface VoidBlade extends Sword {
+  magical_weapon_damage: number[]
 }
 
 export interface SovereignsGhostblade extends CrystalSword {

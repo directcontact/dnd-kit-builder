@@ -31,7 +31,12 @@ import type {
   GoldenWeapon,
   LightBringer,
   Grimslayer,
+  VoidBlade,
+  TrollsBane,
+  DemonsGlee,
 } from '@/typings/equip'
+
+import { ONEMAIN, ONEOFF, TWOMAIN } from '@/typings/slot'
 
 export const ARMING_SWORDS: Sword[] = [
   {
@@ -41,6 +46,7 @@ export const ARMING_SWORDS: Sword[] = [
     move_speed_reduction: 20,
     physical_weapon_damage: [29],
     class: [FIGHTER, RANGER, BARD],
+    slot: ONEMAIN,
   },
   {
     name: 'Arming Sword',
@@ -49,6 +55,7 @@ export const ARMING_SWORDS: Sword[] = [
     move_speed_reduction: 20,
     physical_weapon_damage: [30, 31],
     class: [FIGHTER, RANGER, BARD],
+    slot: ONEMAIN,
   },
   {
     name: 'Arming Sword',
@@ -57,6 +64,7 @@ export const ARMING_SWORDS: Sword[] = [
     move_speed_reduction: 20,
     physical_weapon_damage: [32, 33],
     class: [FIGHTER, RANGER, BARD],
+    slot: ONEMAIN,
   },
   {
     name: 'Arming Sword',
@@ -65,6 +73,7 @@ export const ARMING_SWORDS: Sword[] = [
     move_speed_reduction: 20,
     physical_weapon_damage: [34, 35],
     class: [FIGHTER, RANGER, BARD],
+    slot: ONEMAIN,
   },
   {
     name: 'Arming Sword',
@@ -73,6 +82,7 @@ export const ARMING_SWORDS: Sword[] = [
     move_speed_reduction: 20,
     physical_weapon_damage: [36, 37],
     class: [FIGHTER, RANGER, BARD],
+    slot: ONEMAIN,
   },
   {
     name: 'Arming Sword',
@@ -81,6 +91,7 @@ export const ARMING_SWORDS: Sword[] = [
     move_speed_reduction: 20,
     physical_weapon_damage: [38, 39],
     class: [FIGHTER, RANGER, BARD],
+    slot: ONEMAIN,
   },
   {
     name: 'Arming Sword',
@@ -89,6 +100,7 @@ export const ARMING_SWORDS: Sword[] = [
     move_speed_reduction: 20,
     physical_weapon_damage: [40, 41],
     class: [FIGHTER, RANGER, BARD],
+    slot: ONEMAIN,
   },
 ]
 
@@ -100,6 +112,7 @@ export const BARDICHES: Polearm[] = [
     move_speed_reduction: 45,
     physical_weapon_damage: [48],
     class: [BARBARIAN, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Bardiche',
@@ -108,6 +121,7 @@ export const BARDICHES: Polearm[] = [
     move_speed_reduction: 45,
     physical_weapon_damage: [49, 52],
     class: [BARBARIAN, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Bardiche',
@@ -116,6 +130,7 @@ export const BARDICHES: Polearm[] = [
     move_speed_reduction: 45,
     physical_weapon_damage: [53, 56],
     class: [BARBARIAN, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Bardiche',
@@ -124,6 +139,7 @@ export const BARDICHES: Polearm[] = [
     move_speed_reduction: 45,
     physical_weapon_damage: [57, 60],
     class: [BARBARIAN, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Bardiche',
@@ -132,6 +148,7 @@ export const BARDICHES: Polearm[] = [
     move_speed_reduction: 45,
     physical_weapon_damage: [61, 64],
     class: [BARBARIAN, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Bardiche',
@@ -140,6 +157,7 @@ export const BARDICHES: Polearm[] = [
     move_speed_reduction: 45,
     physical_weapon_damage: [65, 68],
     class: [BARBARIAN, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Bardiche',
@@ -148,6 +166,7 @@ export const BARDICHES: Polearm[] = [
     move_speed_reduction: 45,
     physical_weapon_damage: [69, 72],
     class: [BARBARIAN, WARLOCK],
+    slot: TWOMAIN,
   },
 ]
 
@@ -159,6 +178,7 @@ export const BATTLE_AXES: Axe[] = [
     move_speed_reduction: 30,
     physical_weapon_damage: [48],
     class: [BARBARIAN, FIGHTER],
+    slot: TWOMAIN,
   },
   {
     name: 'Battle Axe',
@@ -167,6 +187,7 @@ export const BATTLE_AXES: Axe[] = [
     move_speed_reduction: 30,
     physical_weapon_damage: [49, 51],
     class: [BARBARIAN, FIGHTER],
+    slot: TWOMAIN,
   },
   {
     name: 'Battle Axe',
@@ -175,6 +196,7 @@ export const BATTLE_AXES: Axe[] = [
     move_speed_reduction: 30,
     physical_weapon_damage: [52, 55],
     class: [BARBARIAN, FIGHTER],
+    slot: TWOMAIN,
   },
   {
     name: 'Battle Axe',
@@ -183,6 +205,7 @@ export const BATTLE_AXES: Axe[] = [
     move_speed_reduction: 30,
     physical_weapon_damage: [56, 59],
     class: [BARBARIAN, FIGHTER],
+    slot: TWOMAIN,
   },
   {
     name: 'Battle Axe',
@@ -191,6 +214,7 @@ export const BATTLE_AXES: Axe[] = [
     move_speed_reduction: 30,
     physical_weapon_damage: [60, 61],
     class: [BARBARIAN, FIGHTER],
+    slot: TWOMAIN,
   },
   {
     name: 'Battle Axe',
@@ -199,6 +223,7 @@ export const BATTLE_AXES: Axe[] = [
     move_speed_reduction: 30,
     physical_weapon_damage: [62, 64],
     class: [BARBARIAN, FIGHTER],
+    slot: TWOMAIN,
   },
   {
     name: 'Echo of Screams',
@@ -207,6 +232,7 @@ export const BATTLE_AXES: Axe[] = [
     move_speed_reduction: 30,
     physical_weapon_damage: [66, 69],
     class: [BARBARIAN, FIGHTER],
+    slot: TWOMAIN,
   },
 ]
 
@@ -218,6 +244,7 @@ export const BUCKLERS: Shield[] = [
     move_speed_reduction: 12,
     armor_rating: [17, 18],
     class: [CLERIC, FIGHTER, BARD],
+    slot: ONEOFF,
   },
   {
     name: 'Buckler',
@@ -226,6 +253,7 @@ export const BUCKLERS: Shield[] = [
     move_speed_reduction: 12,
     armor_rating: [19, 20],
     class: [CLERIC, FIGHTER, BARD],
+    slot: ONEOFF,
   },
   {
     name: 'Buckler',
@@ -234,6 +262,7 @@ export const BUCKLERS: Shield[] = [
     move_speed_reduction: 12,
     armor_rating: [21, 22],
     class: [CLERIC, FIGHTER, BARD],
+    slot: ONEOFF,
   },
   {
     name: 'Buckler',
@@ -242,6 +271,7 @@ export const BUCKLERS: Shield[] = [
     move_speed_reduction: 12,
     armor_rating: [23, 24],
     class: [CLERIC, FIGHTER, BARD],
+    slot: ONEOFF,
   },
   {
     name: 'Buckler',
@@ -250,6 +280,7 @@ export const BUCKLERS: Shield[] = [
     move_speed_reduction: 12,
     armor_rating: [25, 26],
     class: [CLERIC, FIGHTER, BARD],
+    slot: ONEOFF,
   },
   {
     name: 'Buckler',
@@ -258,6 +289,7 @@ export const BUCKLERS: Shield[] = [
     move_speed_reduction: 12,
     armor_rating: [27, 28],
     class: [CLERIC, FIGHTER, BARD],
+    slot: ONEOFF,
   },
   {
     name: 'Buckler',
@@ -266,6 +298,7 @@ export const BUCKLERS: Shield[] = [
     move_speed_reduction: 12,
     armor_rating: [29, 30],
     class: [CLERIC, FIGHTER, BARD],
+    slot: ONEOFF,
   },
 ]
 
@@ -278,6 +311,7 @@ export const CASTILLION_DAGGERS: (Dagger | IceFang)[] = [
     physical_weapon_damage: [20],
     armor_penetration: 0,
     class: [ROGUE, FIGHTER, BARD, DRUID],
+    slot: ONEOFF,
   },
   {
     name: 'Castillon Dagger',
@@ -287,6 +321,7 @@ export const CASTILLION_DAGGERS: (Dagger | IceFang)[] = [
     physical_weapon_damage: [21, 22],
     armor_penetration: 0,
     class: [ROGUE, FIGHTER, BARD, DRUID],
+    slot: ONEOFF,
   },
   {
     name: 'Castillon Dagger',
@@ -296,6 +331,7 @@ export const CASTILLION_DAGGERS: (Dagger | IceFang)[] = [
     physical_weapon_damage: [23, 24],
     armor_penetration: 0,
     class: [ROGUE, FIGHTER, BARD, DRUID],
+    slot: ONEOFF,
   },
   {
     name: 'Castillon Dagger',
@@ -305,6 +341,7 @@ export const CASTILLION_DAGGERS: (Dagger | IceFang)[] = [
     physical_weapon_damage: [25, 26],
     armor_penetration: 0,
     class: [ROGUE, FIGHTER, BARD, DRUID],
+    slot: ONEOFF,
   },
   {
     name: 'Castillon Dagger',
@@ -314,6 +351,7 @@ export const CASTILLION_DAGGERS: (Dagger | IceFang)[] = [
     physical_weapon_damage: [27],
     armor_penetration: 0,
     class: [ROGUE, FIGHTER, BARD, DRUID],
+    slot: ONEOFF,
   },
   {
     name: 'Castillon Dagger',
@@ -323,6 +361,7 @@ export const CASTILLION_DAGGERS: (Dagger | IceFang)[] = [
     physical_weapon_damage: [28],
     armor_penetration: 0,
     class: [ROGUE, FIGHTER, BARD, DRUID],
+    slot: ONEOFF,
   },
   {
     name: 'Castillon Dagger',
@@ -332,6 +371,7 @@ export const CASTILLION_DAGGERS: (Dagger | IceFang)[] = [
     physical_weapon_damage: [29, 30],
     armor_penetration: 0,
     class: [ROGUE, FIGHTER, BARD, DRUID],
+    slot: ONEOFF,
   },
   {
     name: 'Icefang',
@@ -342,6 +382,7 @@ export const CASTILLION_DAGGERS: (Dagger | IceFang)[] = [
     armor_penetration: 10,
     true_physical_damage: 1,
     class: [ROGUE, FIGHTER, BARD, DRUID],
+    slot: ONEOFF,
   },
 ]
 
@@ -356,6 +397,7 @@ export const CEREMONIAL_STAFFS: Staff[] = [
     magic_penetration: 0,
     magical_healing: 1,
     class: [CLERIC, WIZARD, WARLOCK, DRUID],
+    slot: TWOMAIN,
   },
   {
     name: 'Ceremonial Staff',
@@ -367,6 +409,7 @@ export const CEREMONIAL_STAFFS: Staff[] = [
     magic_penetration: 0,
     magical_healing: 2,
     class: [CLERIC, WIZARD, WARLOCK, DRUID],
+    slot: TWOMAIN,
   },
   {
     name: 'Ceremonial Staff',
@@ -378,6 +421,7 @@ export const CEREMONIAL_STAFFS: Staff[] = [
     magic_penetration: 0,
     magical_healing: 3,
     class: [CLERIC, WIZARD, WARLOCK, DRUID],
+    slot: TWOMAIN,
   },
   {
     name: 'Ceremonial Staff',
@@ -389,6 +433,7 @@ export const CEREMONIAL_STAFFS: Staff[] = [
     magic_penetration: 0,
     magical_healing: 4,
     class: [CLERIC, WIZARD, WARLOCK, DRUID],
+    slot: TWOMAIN,
   },
   {
     name: 'Ceremonial Staff',
@@ -400,6 +445,7 @@ export const CEREMONIAL_STAFFS: Staff[] = [
     magic_penetration: 0,
     magical_healing: 5,
     class: [CLERIC, WIZARD, WARLOCK, DRUID],
+    slot: TWOMAIN,
   },
   {
     name: 'Ceremonial Staff',
@@ -411,6 +457,7 @@ export const CEREMONIAL_STAFFS: Staff[] = [
     magic_penetration: 0,
     magical_healing: 6,
     class: [CLERIC, WIZARD, WARLOCK, DRUID],
+    slot: TWOMAIN,
   },
   {
     name: 'Ceremonial Staff',
@@ -422,6 +469,7 @@ export const CEREMONIAL_STAFFS: Staff[] = [
     magic_penetration: 0,
     magical_healing: 7,
     class: [CLERIC, WIZARD, WARLOCK, DRUID],
+    slot: TWOMAIN,
   },
 ]
 
@@ -434,6 +482,7 @@ export const CLUBS: Mace[] = [
     physical_weapon_damage: [28],
     armor_penetration: [10],
     class: [BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: 'Club',
@@ -443,6 +492,7 @@ export const CLUBS: Mace[] = [
     physical_weapon_damage: [29, 30],
     armor_penetration: [10],
     class: [BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: 'Club',
@@ -452,6 +502,7 @@ export const CLUBS: Mace[] = [
     physical_weapon_damage: [31, 32],
     armor_penetration: [10],
     class: [BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: 'Club',
@@ -461,6 +512,7 @@ export const CLUBS: Mace[] = [
     physical_weapon_damage: [33, 34],
     armor_penetration: [10],
     class: [BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: 'Club',
@@ -470,6 +522,7 @@ export const CLUBS: Mace[] = [
     physical_weapon_damage: [35],
     armor_penetration: [10],
     class: [BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: 'Club',
@@ -479,6 +532,7 @@ export const CLUBS: Mace[] = [
     physical_weapon_damage: [36],
     armor_penetration: [10],
     class: [BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: 'Club',
@@ -488,6 +542,7 @@ export const CLUBS: Mace[] = [
     physical_weapon_damage: [36],
     armor_penetration: [10],
     class: [BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: 'Boneshaper',
@@ -497,6 +552,7 @@ export const CLUBS: Mace[] = [
     physical_weapon_damage: [35],
     armor_penetration: [14, 15],
     class: [BARBARIAN],
+    slot: ONEMAIN,
   },
 ]
 
@@ -509,6 +565,7 @@ export const CROSSBOWS: Crossbow[] = [
     physical_weapon_damage: [36],
     armor_penetration: 30,
     class: [FIGHTER, RANGER, WIZARD, BARD],
+    slot: TWOMAIN,
   },
   {
     name: 'Crossbow',
@@ -518,6 +575,7 @@ export const CROSSBOWS: Crossbow[] = [
     physical_weapon_damage: [37, 39],
     armor_penetration: 30,
     class: [FIGHTER, RANGER, WIZARD, BARD],
+    slot: TWOMAIN,
   },
   {
     name: 'Crossbow',
@@ -527,6 +585,7 @@ export const CROSSBOWS: Crossbow[] = [
     physical_weapon_damage: [40, 42],
     armor_penetration: 30,
     class: [FIGHTER, RANGER, WIZARD, BARD],
+    slot: TWOMAIN,
   },
   {
     name: 'Crossbow',
@@ -536,6 +595,7 @@ export const CROSSBOWS: Crossbow[] = [
     physical_weapon_damage: [43, 44],
     armor_penetration: 30,
     class: [FIGHTER, RANGER, WIZARD, BARD],
+    slot: TWOMAIN,
   },
   {
     name: 'Crossbow',
@@ -545,6 +605,7 @@ export const CROSSBOWS: Crossbow[] = [
     physical_weapon_damage: [45],
     armor_penetration: 30,
     class: [FIGHTER, RANGER, WIZARD, BARD],
+    slot: TWOMAIN,
   },
   {
     name: 'Crossbow',
@@ -554,6 +615,7 @@ export const CROSSBOWS: Crossbow[] = [
     physical_weapon_damage: [46],
     armor_penetration: 30,
     class: [FIGHTER, RANGER, WIZARD, BARD],
+    slot: TWOMAIN,
   },
   {
     name: 'Crossbow',
@@ -563,6 +625,7 @@ export const CROSSBOWS: Crossbow[] = [
     physical_weapon_damage: [49, 52],
     armor_penetration: 30,
     class: [FIGHTER, RANGER, WIZARD, BARD],
+    slot: TWOMAIN,
   },
 ]
 
@@ -576,6 +639,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
     addition_physical_weapon_damage: 1,
     magic_penetration: 10,
     class: [WIZARD, WARLOCK, DRUID],
+    slot: ONEOFF,
   },
   {
     name: 'Crystal Ball',
@@ -586,6 +650,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
     addition_physical_weapon_damage: 1,
     magic_penetration: 10,
     class: [WIZARD, WARLOCK, DRUID],
+    slot: ONEOFF,
   },
   {
     name: 'Crystal Ball',
@@ -596,6 +661,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
     addition_physical_weapon_damage: 2,
     magic_penetration: 10,
     class: [WIZARD, WARLOCK, DRUID],
+    slot: ONEOFF,
   },
   {
     name: 'Crystal Ball',
@@ -606,6 +672,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
     addition_physical_weapon_damage: 2,
     magic_penetration: 10,
     class: [WIZARD, WARLOCK, DRUID],
+    slot: ONEOFF,
   },
   {
     name: 'Crystal Ball',
@@ -616,6 +683,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
     addition_physical_weapon_damage: 2,
     magic_penetration: 10,
     class: [WIZARD, WARLOCK, DRUID],
+    slot: ONEOFF,
   },
   {
     name: 'Crystal Ball',
@@ -626,6 +694,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
     addition_physical_weapon_damage: 3,
     magic_penetration: 10,
     class: [WIZARD, WARLOCK, DRUID],
+    slot: ONEOFF,
   },
   {
     name: "Zirkzi's Eye",
@@ -636,6 +705,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
     addition_physical_weapon_damage: 3,
     magic_penetration: 10,
     class: [WIZARD, WARLOCK, DRUID],
+    slot: ONEOFF,
   },
   {
     name: 'Cyclops Vision Crystal',
@@ -649,6 +719,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
     strength: 2,
     knowledge: 2,
     class: [WIZARD, WARLOCK, DRUID],
+    slot: ONEOFF,
   },
   {
     name: 'Mana Sphere',
@@ -662,6 +733,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
     will: 2,
     knowledge: 2,
     class: [WIZARD, WARLOCK, DRUID],
+    slot: ONEOFF,
   },
 ]
 
@@ -674,6 +746,7 @@ export const CRYSTAL_SWORDS: (CrystalSword | SovereignsGhostblade)[] = [
     physical_weapon_damage: [12],
     magical_weapon_damage: [12],
     class: [WIZARD, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Crystal Sword',
@@ -683,6 +756,7 @@ export const CRYSTAL_SWORDS: (CrystalSword | SovereignsGhostblade)[] = [
     physical_weapon_damage: [13, 14],
     magical_weapon_damage: [13, 14],
     class: [WIZARD, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Crystal Sword',
@@ -692,6 +766,7 @@ export const CRYSTAL_SWORDS: (CrystalSword | SovereignsGhostblade)[] = [
     physical_weapon_damage: [15, 16],
     magical_weapon_damage: [15, 16],
     class: [WIZARD, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Crystal Sword',
@@ -701,6 +776,7 @@ export const CRYSTAL_SWORDS: (CrystalSword | SovereignsGhostblade)[] = [
     physical_weapon_damage: [17, 18],
     magical_weapon_damage: [17, 18],
     class: [WIZARD, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Crystal Sword',
@@ -710,6 +786,7 @@ export const CRYSTAL_SWORDS: (CrystalSword | SovereignsGhostblade)[] = [
     physical_weapon_damage: [19],
     magical_weapon_damage: [19],
     class: [WIZARD, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Crystal Sword',
@@ -719,6 +796,7 @@ export const CRYSTAL_SWORDS: (CrystalSword | SovereignsGhostblade)[] = [
     physical_weapon_damage: [20],
     magical_weapon_damage: [20],
     class: [WIZARD, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Crystal Sword',
@@ -728,6 +806,7 @@ export const CRYSTAL_SWORDS: (CrystalSword | SovereignsGhostblade)[] = [
     physical_weapon_damage: [21, 22],
     magical_weapon_damage: [21, 22],
     class: [WIZARD, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Frostlight Crystal Sword',
@@ -740,6 +819,7 @@ export const CRYSTAL_SWORDS: (CrystalSword | SovereignsGhostblade)[] = [
     physical_weapon_damage: [19],
     magical_weapon_damage: [19],
     class: [WIZARD, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: "Sovereign's Ghostblade",
@@ -751,6 +831,7 @@ export const CRYSTAL_SWORDS: (CrystalSword | SovereignsGhostblade)[] = [
     move_speed_bonus: 2,
     magical_healing: 2,
     class: [WIZARD, WARLOCK],
+    slot: TWOMAIN,
   },
 ]
 
@@ -762,6 +843,7 @@ export const DOUBLE_AXES: (Axe | SilverWeapon)[] = [
     move_speed_reduction: 35,
     physical_weapon_damage: [51],
     class: [BARBARIAN],
+    slot: TWOMAIN,
   },
   {
     name: 'Double Axe',
@@ -770,6 +852,7 @@ export const DOUBLE_AXES: (Axe | SilverWeapon)[] = [
     move_speed_reduction: 35,
     physical_weapon_damage: [52, 54],
     class: [BARBARIAN],
+    slot: TWOMAIN,
   },
   {
     name: 'Double Axe',
@@ -778,6 +861,7 @@ export const DOUBLE_AXES: (Axe | SilverWeapon)[] = [
     move_speed_reduction: 35,
     physical_weapon_damage: [55, 57],
     class: [BARBARIAN],
+    slot: TWOMAIN,
   },
   {
     name: 'Double Axe',
@@ -786,6 +870,7 @@ export const DOUBLE_AXES: (Axe | SilverWeapon)[] = [
     move_speed_reduction: 35,
     physical_weapon_damage: [58, 60],
     class: [BARBARIAN],
+    slot: TWOMAIN,
   },
   {
     name: 'Double Axe',
@@ -794,6 +879,7 @@ export const DOUBLE_AXES: (Axe | SilverWeapon)[] = [
     move_speed_reduction: 35,
     physical_weapon_damage: [61, 63],
     class: [BARBARIAN],
+    slot: TWOMAIN,
   },
   {
     name: 'Double Axe',
@@ -802,6 +888,7 @@ export const DOUBLE_AXES: (Axe | SilverWeapon)[] = [
     move_speed_reduction: 35,
     physical_weapon_damage: [64, 66],
     class: [BARBARIAN],
+    slot: TWOMAIN,
   },
   {
     name: 'Life After Death',
@@ -810,6 +897,7 @@ export const DOUBLE_AXES: (Axe | SilverWeapon)[] = [
     move_speed_reduction: 35,
     physical_weapon_damage: [68, 70],
     class: [BARBARIAN],
+    slot: TWOMAIN,
   },
   {
     name: 'Sterling Axe',
@@ -819,6 +907,7 @@ export const DOUBLE_AXES: (Axe | SilverWeapon)[] = [
     undead_damage_bonus: 15,
     physical_weapon_damage: [52, 55],
     class: [BARBARIAN],
+    slot: TWOMAIN,
   },
   {
     name: 'Axe of Righteousness',
@@ -828,6 +917,7 @@ export const DOUBLE_AXES: (Axe | SilverWeapon)[] = [
     undead_damage_bonus: 15,
     physical_weapon_damage: [56, 59],
     class: [BARBARIAN],
+    slot: TWOMAIN,
   },
   {
     name: 'Divine Axe',
@@ -837,6 +927,7 @@ export const DOUBLE_AXES: (Axe | SilverWeapon)[] = [
     undead_damage_bonus: 15,
     physical_weapon_damage: [60, 62],
     class: [BARBARIAN],
+    slot: TWOMAIN,
   },
 ]
 
@@ -848,6 +939,7 @@ export const FALCHIONS: Sword[] = [
     move_speed_reduction: 25,
     physical_weapon_damage: [35],
     class: [FIGHTER, BARD, WARLOCK],
+    slot: ONEMAIN,
   },
   {
     name: 'Falchion',
@@ -856,6 +948,7 @@ export const FALCHIONS: Sword[] = [
     move_speed_reduction: 25,
     physical_weapon_damage: [36, 37],
     class: [FIGHTER, BARD, WARLOCK],
+    slot: ONEMAIN,
   },
   {
     name: 'Falchion',
@@ -864,6 +957,7 @@ export const FALCHIONS: Sword[] = [
     move_speed_reduction: 25,
     physical_weapon_damage: [38, 39],
     class: [FIGHTER, BARD, WARLOCK],
+    slot: ONEMAIN,
   },
   {
     name: 'Falchion',
@@ -872,6 +966,7 @@ export const FALCHIONS: Sword[] = [
     move_speed_reduction: 25,
     physical_weapon_damage: [40, 41],
     class: [FIGHTER, BARD, WARLOCK],
+    slot: ONEMAIN,
   },
   {
     name: 'Falchion',
@@ -880,6 +975,8 @@ export const FALCHIONS: Sword[] = [
     move_speed_reduction: 25,
     physical_weapon_damage: [42, 43],
     class: [FIGHTER, BARD, WARLOCK],
+
+    slot: ONEMAIN,
   },
   {
     name: 'Falchion',
@@ -888,6 +985,7 @@ export const FALCHIONS: Sword[] = [
     move_speed_reduction: 25,
     physical_weapon_damage: [44, 45],
     class: [FIGHTER, BARD, WARLOCK],
+    slot: ONEMAIN,
   },
   {
     name: "Kuma's Fang",
@@ -896,6 +994,7 @@ export const FALCHIONS: Sword[] = [
     move_speed_reduction: 25,
     physical_weapon_damage: [46, 47],
     class: [FIGHTER, BARD, WARLOCK],
+    slot: ONEMAIN,
   },
   {
     name: 'Falchion of Honor',
@@ -904,6 +1003,7 @@ export const FALCHIONS: Sword[] = [
     move_speed_reduction: 25,
     physical_weapon_damage: [42, 43],
     class: [FIGHTER, BARD, WARLOCK],
+    slot: ONEMAIN,
   },
 ]
 
@@ -915,6 +1015,7 @@ export const FELLING_AXES: (Axe | GoldenWeapon)[] = [
     move_speed_reduction: 30,
     physical_weapon_damage: [41],
     class: [BARBARIAN],
+    slot: TWOMAIN,
   },
   {
     name: 'Felling Axe',
@@ -923,6 +1024,7 @@ export const FELLING_AXES: (Axe | GoldenWeapon)[] = [
     move_speed_reduction: 30,
     physical_weapon_damage: [43, 46],
     class: [BARBARIAN],
+    slot: TWOMAIN,
   },
   {
     name: 'Felling Axe',
@@ -931,6 +1033,7 @@ export const FELLING_AXES: (Axe | GoldenWeapon)[] = [
     move_speed_reduction: 30,
     physical_weapon_damage: [47, 49],
     class: [BARBARIAN],
+    slot: TWOMAIN,
   },
   {
     name: 'Felling Axe',
@@ -939,6 +1042,7 @@ export const FELLING_AXES: (Axe | GoldenWeapon)[] = [
     move_speed_reduction: 30,
     physical_weapon_damage: [50, 52],
     class: [BARBARIAN],
+    slot: TWOMAIN,
   },
   {
     name: 'Felling Axe',
@@ -947,6 +1051,7 @@ export const FELLING_AXES: (Axe | GoldenWeapon)[] = [
     move_speed_reduction: 30,
     physical_weapon_damage: [53, 54],
     class: [BARBARIAN],
+    slot: TWOMAIN,
   },
   {
     name: 'Felling Axe',
@@ -955,6 +1060,7 @@ export const FELLING_AXES: (Axe | GoldenWeapon)[] = [
     move_speed_reduction: 30,
     physical_weapon_damage: [55],
     class: [BARBARIAN],
+    slot: TWOMAIN,
   },
   {
     name: 'Soulscraper',
@@ -963,6 +1069,7 @@ export const FELLING_AXES: (Axe | GoldenWeapon)[] = [
     move_speed_reduction: 30,
     physical_weapon_damage: [57, 59],
     class: [BARBARIAN],
+    slot: TWOMAIN,
   },
   {
     name: 'Golden Felling Axe',
@@ -973,6 +1080,7 @@ export const FELLING_AXES: (Axe | GoldenWeapon)[] = [
     luck: 10,
     magical_damage_reduction: 1.5,
     class: [BARBARIAN],
+    slot: TWOMAIN,
   },
 ]
 
@@ -985,6 +1093,7 @@ export const FLANGED_MACES: (Mace | SilverWeapon | LightBringer)[] = [
     physical_weapon_damage: [33],
     armor_penetration: [15],
     class: [FIGHTER, CLERIC, DRUID],
+    slot: ONEMAIN,
   },
   {
     name: 'Flanged Mace',
@@ -994,6 +1103,7 @@ export const FLANGED_MACES: (Mace | SilverWeapon | LightBringer)[] = [
     physical_weapon_damage: [34, 35],
     armor_penetration: [15],
     class: [FIGHTER, CLERIC, DRUID],
+    slot: ONEMAIN,
   },
   {
     name: 'Flanged Mace',
@@ -1003,6 +1113,7 @@ export const FLANGED_MACES: (Mace | SilverWeapon | LightBringer)[] = [
     physical_weapon_damage: [36, 37],
     armor_penetration: [15],
     class: [FIGHTER, CLERIC, DRUID],
+    slot: ONEMAIN,
   },
   {
     name: 'Flanged Mace',
@@ -1012,6 +1123,7 @@ export const FLANGED_MACES: (Mace | SilverWeapon | LightBringer)[] = [
     physical_weapon_damage: [38, 39],
     armor_penetration: [15],
     class: [FIGHTER, CLERIC, DRUID],
+    slot: ONEMAIN,
   },
   {
     name: 'Flanged Mace',
@@ -1021,6 +1133,7 @@ export const FLANGED_MACES: (Mace | SilverWeapon | LightBringer)[] = [
     physical_weapon_damage: [40],
     armor_penetration: [15],
     class: [FIGHTER, CLERIC, DRUID],
+    slot: ONEMAIN,
   },
   {
     name: 'Flanged Mace',
@@ -1030,6 +1143,7 @@ export const FLANGED_MACES: (Mace | SilverWeapon | LightBringer)[] = [
     physical_weapon_damage: [41],
     armor_penetration: [15],
     class: [FIGHTER, CLERIC, DRUID],
+    slot: ONEMAIN,
   },
   {
     name: 'Flanged Mace',
@@ -1039,6 +1153,7 @@ export const FLANGED_MACES: (Mace | SilverWeapon | LightBringer)[] = [
     physical_weapon_damage: [43, 44],
     armor_penetration: [15],
     class: [FIGHTER, CLERIC, DRUID],
+    slot: ONEMAIN,
   },
   {
     name: 'Light Bringer',
@@ -1049,6 +1164,7 @@ export const FLANGED_MACES: (Mace | SilverWeapon | LightBringer)[] = [
     armor_penetration: [15],
     action_speed: [3, 4],
     class: [FIGHTER, CLERIC, DRUID],
+    slot: ONEMAIN,
   },
   {
     name: 'Sterling Rod',
@@ -1059,6 +1175,7 @@ export const FLANGED_MACES: (Mace | SilverWeapon | LightBringer)[] = [
     armor_penetration: [15],
     undead_damage_bonus: 15,
     class: [FIGHTER, CLERIC, DRUID],
+    slot: ONEMAIN,
   },
   {
     name: 'Rod of Righteousness',
@@ -1069,6 +1186,7 @@ export const FLANGED_MACES: (Mace | SilverWeapon | LightBringer)[] = [
     armor_penetration: [15],
     undead_damage_bonus: 15,
     class: [FIGHTER, CLERIC, DRUID],
+    slot: ONEMAIN,
   },
   {
     name: 'Divine Rod',
@@ -1079,6 +1197,7 @@ export const FLANGED_MACES: (Mace | SilverWeapon | LightBringer)[] = [
     armor_penetration: [15],
     undead_damage_bonus: 15,
     class: [FIGHTER, CLERIC, DRUID],
+    slot: ONEMAIN,
   },
 ]
 
@@ -1090,6 +1209,7 @@ export const HALBERDS: Polearm[] = [
     move_speed_reduction: 45,
     physical_weapon_damage: [51],
     class: [FIGHTER, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Halberd',
@@ -1098,6 +1218,7 @@ export const HALBERDS: Polearm[] = [
     move_speed_reduction: 45,
     physical_weapon_damage: [52, 54],
     class: [FIGHTER, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Halberd',
@@ -1106,6 +1227,7 @@ export const HALBERDS: Polearm[] = [
     move_speed_reduction: 45,
     physical_weapon_damage: [56, 58],
     class: [FIGHTER, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Halberd',
@@ -1114,6 +1236,7 @@ export const HALBERDS: Polearm[] = [
     move_speed_reduction: 45,
     physical_weapon_damage: [60, 62],
     class: [FIGHTER, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Halberd',
@@ -1122,6 +1245,7 @@ export const HALBERDS: Polearm[] = [
     move_speed_reduction: 45,
     physical_weapon_damage: [64, 66],
     class: [FIGHTER, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Halberd',
@@ -1130,6 +1254,7 @@ export const HALBERDS: Polearm[] = [
     move_speed_reduction: 45,
     physical_weapon_damage: [67, 69],
     class: [FIGHTER, WARLOCK],
+    slot: TWOMAIN,
   },
   {
     name: 'Cinder',
@@ -1138,6 +1263,7 @@ export const HALBERDS: Polearm[] = [
     move_speed_reduction: 45,
     physical_weapon_damage: [71, 74],
     class: [FIGHTER, WARLOCK],
+    slot: TWOMAIN,
   },
 ]
 
@@ -1150,6 +1276,7 @@ export const HAND_CROSSBOWS: Crossbow[] = [
     physical_weapon_damage: [18],
     armor_penetration: 5,
     class: [ROGUE, RANGER, BARD],
+    slot: ONEOFF,
   },
   {
     name: 'Hand Crossbow',
@@ -1159,6 +1286,7 @@ export const HAND_CROSSBOWS: Crossbow[] = [
     physical_weapon_damage: [19, 20],
     armor_penetration: 5,
     class: [ROGUE, RANGER, BARD],
+    slot: ONEOFF,
   },
   {
     name: 'Hand Crossbow',
@@ -1168,6 +1296,7 @@ export const HAND_CROSSBOWS: Crossbow[] = [
     physical_weapon_damage: [20, 21],
     armor_penetration: 5,
     class: [ROGUE, RANGER, BARD],
+    slot: ONEOFF,
   },
   {
     name: 'Hand Crossbow',
@@ -1177,6 +1306,7 @@ export const HAND_CROSSBOWS: Crossbow[] = [
     physical_weapon_damage: [21, 22],
     armor_penetration: 5,
     class: [ROGUE, RANGER, BARD],
+    slot: ONEOFF,
   },
   {
     name: 'Hand Crossbow',
@@ -1186,6 +1316,7 @@ export const HAND_CROSSBOWS: Crossbow[] = [
     physical_weapon_damage: [23],
     armor_penetration: 5,
     class: [ROGUE, RANGER, BARD],
+    slot: ONEOFF,
   },
   {
     name: 'Hand Crossbow',
@@ -1195,6 +1326,7 @@ export const HAND_CROSSBOWS: Crossbow[] = [
     physical_weapon_damage: [24],
     armor_penetration: 5,
     class: [ROGUE, RANGER, BARD],
+    slot: ONEOFF,
   },
   {
     name: 'Hand Crossbow',
@@ -1204,6 +1336,7 @@ export const HAND_CROSSBOWS: Crossbow[] = [
     physical_weapon_damage: [25, 26],
     armor_penetration: 5,
     class: [ROGUE, RANGER, BARD],
+    slot: ONEOFF,
   },
 ]
 
@@ -1215,6 +1348,7 @@ export const HATCHETS: Axe[] = [
     move_speed_reduction: 20,
     physical_weapon_damage: [27],
     class: [FIGHTER, BARBARIAN],
+    slot: ONEOFF,
   },
   {
     name: 'Hatchet',
@@ -1223,6 +1357,7 @@ export const HATCHETS: Axe[] = [
     move_speed_reduction: 20,
     physical_weapon_damage: [28, 30],
     class: [FIGHTER, BARBARIAN],
+    slot: ONEOFF,
   },
   {
     name: 'Hatchet',
@@ -1231,6 +1366,7 @@ export const HATCHETS: Axe[] = [
     move_speed_reduction: 20,
     physical_weapon_damage: [31, 33],
     class: [FIGHTER, BARBARIAN],
+    slot: ONEOFF,
   },
   {
     name: 'Hatchet',
@@ -1239,6 +1375,7 @@ export const HATCHETS: Axe[] = [
     move_speed_reduction: 20,
     physical_weapon_damage: [34, 36],
     class: [FIGHTER, BARBARIAN],
+    slot: ONEOFF,
   },
   {
     name: 'Hatchet',
@@ -1247,6 +1384,7 @@ export const HATCHETS: Axe[] = [
     move_speed_reduction: 20,
     physical_weapon_damage: [37, 39],
     class: [FIGHTER, BARBARIAN],
+    slot: ONEOFF,
   },
   {
     name: 'Hatchet',
@@ -1255,6 +1393,7 @@ export const HATCHETS: Axe[] = [
     move_speed_reduction: 20,
     physical_weapon_damage: [40, 42],
     class: [FIGHTER, BARBARIAN],
+    slot: ONEOFF,
   },
   {
     name: 'Hatchet',
@@ -1263,6 +1402,7 @@ export const HATCHETS: Axe[] = [
     move_speed_reduction: 20,
     physical_weapon_damage: [43, 45],
     class: [FIGHTER, BARBARIAN],
+    slot: ONEOFF,
   },
 ]
 
@@ -1274,6 +1414,7 @@ export const HEATER_SHIELDS: Shield[] = [
     move_speed_reduction: 20,
     armor_rating: [20, 21],
     class: [CLERIC, FIGHTER, WARLOCK],
+    slot: ONEOFF,
   },
   {
     name: 'Heater Shield',
@@ -1282,6 +1423,7 @@ export const HEATER_SHIELDS: Shield[] = [
     move_speed_reduction: 20,
     armor_rating: [22, 23],
     class: [CLERIC, FIGHTER, WARLOCK],
+    slot: ONEOFF,
   },
   {
     name: 'Heater Shield',
@@ -1290,6 +1432,7 @@ export const HEATER_SHIELDS: Shield[] = [
     move_speed_reduction: 20,
     armor_rating: [24, 26],
     class: [CLERIC, FIGHTER, WARLOCK],
+    slot: ONEOFF,
   },
   {
     name: 'Heater Shield',
@@ -1298,6 +1441,7 @@ export const HEATER_SHIELDS: Shield[] = [
     move_speed_reduction: 20,
     armor_rating: [27, 29],
     class: [CLERIC, FIGHTER, WARLOCK],
+    slot: ONEOFF,
   },
   {
     name: 'Heater Shield',
@@ -1306,6 +1450,7 @@ export const HEATER_SHIELDS: Shield[] = [
     move_speed_reduction: 20,
     armor_rating: [30, 32],
     class: [CLERIC, FIGHTER, WARLOCK],
+    slot: ONEOFF,
   },
   {
     name: 'Heater Shield',
@@ -1314,6 +1459,7 @@ export const HEATER_SHIELDS: Shield[] = [
     move_speed_reduction: 20,
     armor_rating: [33, 35],
     class: [CLERIC, FIGHTER, WARLOCK],
+    slot: ONEOFF,
   },
   {
     name: 'Aegis',
@@ -1322,6 +1468,7 @@ export const HEATER_SHIELDS: Shield[] = [
     move_speed_reduction: 20,
     armor_rating: [36, 38],
     class: [CLERIC, FIGHTER, WARLOCK],
+    slot: ONEOFF,
   },
 ]
 
@@ -1333,6 +1480,7 @@ export const HORSEMANS_AXES: Axe[] = [
     move_speed_reduction: 22,
     physical_weapon_damage: [29],
     class: [FIGHTER, BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: "Horseman's Axe",
@@ -1341,6 +1489,7 @@ export const HORSEMANS_AXES: Axe[] = [
     move_speed_reduction: 22,
     physical_weapon_damage: [30, 32],
     class: [FIGHTER, BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: "Horseman's Axe",
@@ -1349,6 +1498,7 @@ export const HORSEMANS_AXES: Axe[] = [
     move_speed_reduction: 22,
     physical_weapon_damage: [33, 35],
     class: [FIGHTER, BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: "Horseman's Axe",
@@ -1357,6 +1507,7 @@ export const HORSEMANS_AXES: Axe[] = [
     move_speed_reduction: 22,
     physical_weapon_damage: [36, 38],
     class: [FIGHTER, BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: "Horseman's Axe",
@@ -1365,6 +1516,7 @@ export const HORSEMANS_AXES: Axe[] = [
     move_speed_reduction: 22,
     physical_weapon_damage: [39, 41],
     class: [FIGHTER, BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: "Horseman's Axe",
@@ -1373,6 +1525,7 @@ export const HORSEMANS_AXES: Axe[] = [
     move_speed_reduction: 22,
     physical_weapon_damage: [42, 44],
     class: [FIGHTER, BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: 'Famine',
@@ -1381,6 +1534,7 @@ export const HORSEMANS_AXES: Axe[] = [
     move_speed_reduction: 22,
     physical_weapon_damage: [45, 47],
     class: [FIGHTER, BARBARIAN],
+    slot: ONEMAIN,
   },
 ]
 
@@ -1393,6 +1547,7 @@ export const KRIS_DAGGERS: Dagger[] = [
     physical_weapon_damage: [20],
     armor_penetration: 0,
     class: [FIGHTER, BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: 'Kris Dagger',
@@ -1402,6 +1557,7 @@ export const KRIS_DAGGERS: Dagger[] = [
     physical_weapon_damage: [21, 22],
     armor_penetration: 0,
     class: [FIGHTER, BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: 'Kris Dagger',
@@ -1411,6 +1567,7 @@ export const KRIS_DAGGERS: Dagger[] = [
     physical_weapon_damage: [23, 24],
     armor_penetration: 0,
     class: [FIGHTER, BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: 'Kris Dagger',
@@ -1420,6 +1577,7 @@ export const KRIS_DAGGERS: Dagger[] = [
     physical_weapon_damage: [24, 25],
     armor_penetration: 0,
     class: [FIGHTER, BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: 'Kris Dagger',
@@ -1429,6 +1587,7 @@ export const KRIS_DAGGERS: Dagger[] = [
     physical_weapon_damage: [26],
     armor_penetration: 0,
     class: [FIGHTER, BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: 'Kris Dagger',
@@ -1438,6 +1597,7 @@ export const KRIS_DAGGERS: Dagger[] = [
     physical_weapon_damage: [27],
     armor_penetration: 0,
     class: [FIGHTER, BARBARIAN],
+    slot: ONEMAIN,
   },
   {
     name: 'Kris Dagger',
@@ -1447,30 +1607,1083 @@ export const KRIS_DAGGERS: Dagger[] = [
     physical_weapon_damage: [28, 29],
     armor_penetration: 0,
     class: [FIGHTER, BARBARIAN],
+    slot: ONEMAIN,
   },
 ]
 
-export const LANTERN_SHIELDS: LanternShield[] = []
+export const LANTERN_SHIELDS: LanternShield[] = [
+  {
+    name: 'Lantern Shield',
+    rarity: 0,
+    src: new URL('@/assets/weapons/lantern_shield/90px-Lantern_Shield_2.png', import.meta.url),
+    move_speed_reduction: 19,
+    armor_rating: [17, 18],
+    physical_weapon_damage: [19],
+    class: [FIGHTER, BARD],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Lantern Shield',
+    rarity: 1,
+    src: new URL('@/assets/weapons/lantern_shield/90px-Lantern_Shield_2.png', import.meta.url),
+    move_speed_reduction: 19,
+    armor_rating: [19, 20],
+    physical_weapon_damage: [20],
+    class: [FIGHTER, BARD],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Lantern Shield',
+    rarity: 2,
+    src: new URL('@/assets/weapons/lantern_shield/90px-Lantern_Shield_2.png', import.meta.url),
+    move_speed_reduction: 19,
+    armor_rating: [21, 22],
+    physical_weapon_damage: [21, 23],
+    class: [FIGHTER, BARD],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Lantern Shield',
+    rarity: 3,
+    src: new URL('@/assets/weapons/lantern_shield/90px-Lantern_Shield_2.png', import.meta.url),
+    move_speed_reduction: 19,
+    armor_rating: [23, 24],
+    physical_weapon_damage: [24, 25],
+    class: [FIGHTER, BARD],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Lantern Shield',
+    rarity: 4,
+    src: new URL('@/assets/weapons/lantern_shield/90px-Lantern_Shield_2.png', import.meta.url),
+    move_speed_reduction: 19,
+    armor_rating: [25, 26],
+    physical_weapon_damage: [26],
+    class: [FIGHTER, BARD],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Lantern Shield',
+    rarity: 5,
+    src: new URL('@/assets/weapons/lantern_shield/90px-Lantern_Shield_2.png', import.meta.url),
+    move_speed_reduction: 19,
+    armor_rating: [27, 28],
+    physical_weapon_damage: [27],
+    class: [FIGHTER, BARD],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Lantern Shield',
+    rarity: 6,
+    src: new URL('@/assets/weapons/lantern_shield/90px-Lantern_Shield_2.png', import.meta.url),
+    move_speed_reduction: 19,
+    armor_rating: [29, 30],
+    physical_weapon_damage: [28, 29],
+    class: [FIGHTER, BARD],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Frostlight Lantern Shield',
+    rarity: 4,
+    src: new URL(
+      '@/assets/weapons/lantern_shield/90px-Frostlight_Lantern_Shield_2.png',
+      import.meta.url,
+    ),
+    move_speed_reduction: 15,
+    armor_rating: [25, 26],
+    physical_weapon_damage: [26],
+    class: [FIGHTER, BARD],
+    slot: ONEOFF,
+  },
+]
 
-export const LONGBOWS: Bow[] = []
+export const LONGBOWS: Bow[] = [
+  {
+    name: 'Longbow',
+    rarity: 0,
+    src: new URL('@/assets/weapons/longbow/45px-Longbow_1.png', import.meta.url),
+    move_speed_reduction: 50,
+    physical_weapon_damage: [38],
+    armor_penetration: 20,
+    class: [RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Longbow',
+    rarity: 1,
+    src: new URL('@/assets/weapons/longbow/45px-Longbow_2.png', import.meta.url),
+    move_speed_reduction: 50,
+    physical_weapon_damage: [39, 40],
+    armor_penetration: 20,
+    class: [RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Longbow',
+    rarity: 2,
+    src: new URL('@/assets/weapons/longbow/45px-Longbow_3.png', import.meta.url),
+    move_speed_reduction: 50,
+    physical_weapon_damage: [41, 42],
+    armor_penetration: 20,
+    class: [RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Longbow',
+    rarity: 3,
+    src: new URL('@/assets/weapons/longbow/45px-Longbow_4.png', import.meta.url),
+    move_speed_reduction: 50,
+    physical_weapon_damage: [43, 44],
+    armor_penetration: 20,
+    class: [RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Longbow',
+    rarity: 4,
+    src: new URL('@/assets/weapons/longbow/45px-Longbow_5.png', import.meta.url),
+    move_speed_reduction: 50,
+    physical_weapon_damage: [45, 46],
+    armor_penetration: 20,
+    class: [RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Longbow',
+    rarity: 5,
+    src: new URL('@/assets/weapons/longbow/45px-Longbow_6.png', import.meta.url),
+    move_speed_reduction: 50,
+    physical_weapon_damage: [47],
+    armor_penetration: 20,
+    class: [RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Nipalan',
+    rarity: 6,
+    src: new URL('@/assets/weapons/longbow/45px-Nipalan.png', import.meta.url),
+    move_speed_reduction: 50,
+    physical_weapon_damage: [49, 51],
+    armor_penetration: 20,
+    class: [RANGER],
+    slot: TWOMAIN,
+  },
+]
 
-export const LONGSWORDS: (Sword | SilverWeapon)[] = []
+export const LONGSWORDS: (Sword | SilverWeapon | VoidBlade)[] = [
+  {
+    name: 'Longsword',
+    rarity: 0,
+    src: new URL('@/assets/weapons/longsword/45px-Longsword_1.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [39],
+    class: [FIGHTER, WARLOCK],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Longsword',
+    rarity: 1,
+    src: new URL('@/assets/weapons/longsword/45px-Longsword_2.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [40, 42],
+    class: [FIGHTER, WARLOCK],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Longsword',
+    rarity: 2,
+    src: new URL('@/assets/weapons/longsword/45px-Longsword_3.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [43, 44],
+    class: [FIGHTER, WARLOCK],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Longsword',
+    rarity: 3,
+    src: new URL('@/assets/weapons/longsword/45px-Longsword_4.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [45, 46],
+    class: [FIGHTER, WARLOCK],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Longsword',
+    rarity: 4,
+    src: new URL('@/assets/weapons/longsword/45px-Longsword_5.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [47],
+    class: [FIGHTER, WARLOCK],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Longsword',
+    rarity: 5,
+    src: new URL('@/assets/weapons/longsword/45px-Longsword_6.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [48],
+    class: [FIGHTER, WARLOCK],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Fulgor',
+    rarity: 6,
+    src: new URL('@/assets/weapons/longsword/45px-Fulgor.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [50, 52],
+    class: [FIGHTER, WARLOCK],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Sterling Blade',
+    rarity: 1,
+    src: new URL('@/assets/weapons/longsword/45px-Sterling_Blade.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [40, 42],
+    undead_damage_bonus: 15,
+    class: [FIGHTER, WARLOCK],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Blade of Righteousness',
+    rarity: 2,
+    src: new URL('@/assets/weapons/longsword/45px-Blade_of_Righteousness.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [43, 44],
+    undead_damage_bonus: 15,
+    class: [FIGHTER, WARLOCK],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Divine Blade',
+    rarity: 3,
+    src: new URL('@/assets/weapons/longsword/45px-Divine_Blade.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [45, 46],
+    undead_damage_bonus: 15,
+    class: [FIGHTER, WARLOCK],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Void Blade',
+    rarity: 4,
+    src: new URL('@/assets/weapons/longsword/45px-Void_Blade.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [47],
+    magical_weapon_damage: [3, 4],
+    class: [FIGHTER, WARLOCK],
+    slot: TWOMAIN,
+  },
+]
 
-export const MAGIC_STAFFS: Staff[] = []
+export const MAGIC_STAFFS: Staff[] = [
+  {
+    name: 'Magic Staff',
+    rarity: 0,
+    src: new URL('@/assets/weapons/magic_staff/45px-Magic_Staff_1.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage: [27],
+    magical_damage: 4,
+    magic_penetration: 15,
+    magical_healing: 0,
+    class: [WIZARD, CLERIC, WARLOCK, DRUID],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Magic Staff',
+    rarity: 1,
+    src: new URL('@/assets/weapons/magic_staff/45px-Magic_Staff_2.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage: [28, 30],
+    magical_damage: 5,
+    magic_penetration: 15,
+    magical_healing: 0,
+    class: [WIZARD, CLERIC, WARLOCK, DRUID],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Magic Staff',
+    rarity: 2,
+    src: new URL('@/assets/weapons/magic_staff/45px-Magic_Staff_3.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage: [31, 33],
+    magical_damage: 6,
+    magic_penetration: 15,
+    magical_healing: 0,
+    class: [WIZARD, CLERIC, WARLOCK, DRUID],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Magic Staff',
+    rarity: 3,
+    src: new URL('@/assets/weapons/magic_staff/45px-Magic_Staff_4.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage: [34, 35],
+    magical_damage: 7,
+    magic_penetration: 15,
+    magical_healing: 0,
+    class: [WIZARD, CLERIC, WARLOCK, DRUID],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Magic Staff',
+    rarity: 4,
+    src: new URL('@/assets/weapons/magic_staff/45px-Magic_Staff_5.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage: [36],
+    magical_damage: 8,
+    magic_penetration: 15,
+    magical_healing: 0,
+    class: [WIZARD, CLERIC, WARLOCK, DRUID],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Magic Staff',
+    rarity: 5,
+    src: new URL('@/assets/weapons/magic_staff/45px-Magic_Staff_6.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage: [37],
+    magical_damage: 9,
+    magic_penetration: 15,
+    magical_healing: 0,
+    class: [WIZARD, CLERIC, WARLOCK, DRUID],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Illusory',
+    rarity: 6,
+    src: new URL('@/assets/weapons/magic_staff/45px-Illusory.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage: [39, 41],
+    magical_damage: 10,
+    magic_penetration: 15,
+    magical_healing: 0,
+    class: [WIZARD, CLERIC, WARLOCK, DRUID],
+    slot: TWOMAIN,
+  },
+]
 
-export const MORNING_STARS: Mace[] = []
+export const MORNING_STARS: Mace[] = [
+  {
+    name: 'Morning Star',
+    rarity: 0,
+    src: new URL('@/assets/weapons/morning_star/45px-Morning_Star_1.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage: [35],
+    armor_penetration: [15],
+    class: [CLERIC, DRUID],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Morning Star',
+    rarity: 1,
+    src: new URL('@/assets/weapons/morning_star/45px-Morning_Star_2.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage: [36, 37],
+    armor_penetration: [15],
+    class: [CLERIC, DRUID],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Morning Star',
+    rarity: 2,
+    src: new URL('@/assets/weapons/morning_star/45px-Morning_Star_3.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage: [38, 39],
+    armor_penetration: [15],
+    class: [CLERIC, DRUID],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Morning Star',
+    rarity: 3,
+    src: new URL('@/assets/weapons/morning_star/45px-Morning_Star_4.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage: [40, 41],
+    armor_penetration: [15],
+    class: [CLERIC, DRUID],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Morning Star',
+    rarity: 4,
+    src: new URL('@/assets/weapons/morning_star/45px-Morning_Star_5.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage: [42],
+    armor_penetration: [15],
+    class: [CLERIC, DRUID],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Morning Star',
+    rarity: 5,
+    src: new URL('@/assets/weapons/morning_star/45px-Morning_Star_6.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage: [43],
+    armor_penetration: [15],
+    class: [CLERIC, DRUID],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Pulverizing Prayer',
+    rarity: 6,
+    src: new URL('@/assets/weapons/morning_star/45px-Pulverizing_Prayer.png', import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage: [45, 46],
+    armor_penetration: [15],
+    class: [CLERIC, DRUID],
+    slot: ONEMAIN,
+  },
+]
 
-export const PAVISES: Shield[] = []
+export const PAVISES: Shield[] = [
+  {
+    name: 'Pavise',
+    rarity: 0,
+    src: new URL('@/assets/weapons/pavise/135px-Pavise_1.png', import.meta.url),
+    move_speed_reduction: 35,
+    armor_rating: [30, 33],
+    class: [FIGHTER, RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Pavise',
+    rarity: 1,
+    src: new URL('@/assets/weapons/pavise/135px-Pavise_2.png', import.meta.url),
+    move_speed_reduction: 35,
+    armor_rating: [34, 37],
+    class: [FIGHTER, RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Pavise',
+    rarity: 2,
+    src: new URL('@/assets/weapons/pavise/135px-Pavise_3.png', import.meta.url),
+    move_speed_reduction: 35,
+    armor_rating: [38, 41],
+    class: [FIGHTER, RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Pavise',
+    rarity: 3,
+    src: new URL('@/assets/weapons/pavise/135px-Pavise_4.png', import.meta.url),
+    move_speed_reduction: 35,
+    armor_rating: [42, 45],
+    class: [FIGHTER, RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Pavise',
+    rarity: 4,
+    src: new URL('@/assets/weapons/pavise/135px-Pavise_5.png', import.meta.url),
+    move_speed_reduction: 35,
+    armor_rating: [46, 49],
+    class: [FIGHTER, RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Pavise',
+    rarity: 5,
+    src: new URL('@/assets/weapons/pavise/135px-Pavise_6.png', import.meta.url),
+    move_speed_reduction: 35,
+    armor_rating: [50, 53],
+    class: [FIGHTER, RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Pavise',
+    rarity: 6,
+    src: new URL('@/assets/weapons/pavise/135px-Pavise_6.png', import.meta.url),
+    move_speed_reduction: 35,
+    armor_rating: [54, 57],
+    class: [FIGHTER, RANGER],
+    slot: TWOMAIN,
+  },
+]
 
-export const QUARTERSTAFFS: (Mace | SilverWeapon)[] = []
+export const QUARTERSTAFFS: (Mace | SilverWeapon | TrollsBane)[] = [
+  {
+    name: 'Quarterstaff',
+    rarity: 0,
+    src: new URL('@/assets/weapons/quarterstaff/45px-Quarterstaff_1.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [33],
+    armor_penetration: [0],
+    class: [BARBARIAN, WIZARD, CLERIC, WARLOCK, DRUID],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Quarterstaff',
+    rarity: 1,
+    src: new URL('@/assets/weapons/quarterstaff/45px-Quarterstaff_2.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [34, 35],
+    armor_penetration: [0],
+    class: [BARBARIAN, WIZARD, CLERIC, WARLOCK, DRUID],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Quarterstaff',
+    rarity: 2,
+    src: new URL('@/assets/weapons/quarterstaff/45px-Quarterstaff_3.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [36, 37],
+    armor_penetration: [0],
+    class: [BARBARIAN, WIZARD, CLERIC, WARLOCK, DRUID],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Quarterstaff',
+    rarity: 3,
+    src: new URL('@/assets/weapons/quarterstaff/45px-Quarterstaff_4.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [38, 39],
+    armor_penetration: [0],
+    class: [BARBARIAN, WIZARD, CLERIC, WARLOCK, DRUID],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Quarterstaff',
+    rarity: 4,
+    src: new URL('@/assets/weapons/quarterstaff/45px-Quarterstaff_5.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [40, 41],
+    armor_penetration: [0],
+    class: [BARBARIAN, WIZARD, CLERIC, WARLOCK, DRUID],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Quarterstaff',
+    rarity: 5,
+    src: new URL('@/assets/weapons/quarterstaff/45px-Quarterstaff_6.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [42, 43],
+    armor_penetration: [0],
+    class: [BARBARIAN, WIZARD, CLERIC, WARLOCK, DRUID],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Quarterstaff',
+    rarity: 6,
+    src: new URL('@/assets/weapons/quarterstaff/45px-Quarterstaff_6.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [45, 47],
+    armor_penetration: [0],
+    class: [BARBARIAN, WIZARD, CLERIC, WARLOCK, DRUID],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Sterling Staff',
+    rarity: 1,
+    src: new URL('@/assets/weapons/quarterstaff/45px-Sterling_Staff.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [34, 35],
+    armor_penetration: [0],
+    undead_damage_bonus: 15,
+    class: [BARBARIAN, WIZARD, CLERIC, WARLOCK, DRUID],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Staff of Righteousness',
+    rarity: 2,
+    src: new URL('@/assets/weapons/quarterstaff/45px-Staff_of_Righteousness.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [36, 37],
+    armor_penetration: [0],
+    undead_damage_bonus: 15,
+    class: [BARBARIAN, WIZARD, CLERIC, WARLOCK, DRUID],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Divine Staff',
+    rarity: 3,
+    src: new URL('@/assets/weapons/quarterstaff/45px-Divine_Staff.png', import.meta.url),
+    move_speed_reduction: 30,
+    physical_weapon_damage: [38, 39],
+    armor_penetration: [0],
+    undead_damage_bonus: 15,
+    class: [BARBARIAN, WIZARD, CLERIC, WARLOCK, DRUID],
+    slot: TWOMAIN,
+  },
+  {
+    name: "Troll's Bane",
+    rarity: 4,
+    src: new URL("@/assets/weapons/quarterstaff/45px-Troll's_Bane.png", import.meta.url),
+    move_speed_reduction: 20,
+    physical_weapon_damage: [40, 41],
+    max_health_bonus: [3, 4],
+    armor_penetration: [0],
+    class: [BARBARIAN, WIZARD, CLERIC, WARLOCK, DRUID],
+    slot: TWOMAIN,
+  },
+]
 
-export const RAPIERS: Sword[] = []
+export const RAPIERS: (Sword | DemonsGlee)[] = [
+  {
+    name: 'Rapier',
+    rarity: 0,
+    src: new URL('@/assets/weapons/rapier/45px-Rapier_1.png', import.meta.url),
+    move_speed_reduction: 15,
+    physical_weapon_damage: [21],
+    class: [RANGER, ROGUE, BARD],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Rapier',
+    rarity: 1,
+    src: new URL('@/assets/weapons/rapier/45px-Rapier_2.png', import.meta.url),
+    move_speed_reduction: 15,
+    physical_weapon_damage: [22, 23],
+    class: [RANGER, ROGUE, BARD],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Rapier',
+    rarity: 2,
+    src: new URL('@/assets/weapons/rapier/45px-Rapier_3.png', import.meta.url),
+    move_speed_reduction: 15,
+    physical_weapon_damage: [24, 25],
+    class: [RANGER, ROGUE, BARD],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Rapier',
+    rarity: 3,
+    src: new URL('@/assets/weapons/rapier/45px-Rapier_4.png', import.meta.url),
+    move_speed_reduction: 15,
+    physical_weapon_damage: [26, 27],
+    class: [RANGER, ROGUE, BARD],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Rapier',
+    rarity: 4,
+    src: new URL('@/assets/weapons/rapier/45px-Rapier_5.png', import.meta.url),
+    move_speed_reduction: 15,
+    physical_weapon_damage: [28],
+    class: [RANGER, ROGUE, BARD],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Rapier',
+    rarity: 5,
+    src: new URL('@/assets/weapons/rapier/45px-Rapier_6.png', import.meta.url),
+    move_speed_reduction: 15,
+    physical_weapon_damage: [29],
+    class: [RANGER, ROGUE, BARD],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Viola',
+    rarity: 0,
+    src: new URL('@/assets/weapons/rapier/45px-Viola.png', import.meta.url),
+    move_speed_reduction: 15,
+    physical_weapon_damage: [30, 31],
+    class: [RANGER, ROGUE, BARD],
+    slot: ONEMAIN,
+  },
+  {
+    name: "Demon's Glee",
+    rarity: 4,
+    src: new URL("@/assets/weapons/rapier/45px-Demon's_Glee.png", import.meta.url),
+    move_speed_reduction: 15,
+    physical_weapon_damage: [28],
+    magical_weapon_damage: 1,
+    class: [RANGER, ROGUE, BARD],
+    slot: ONEMAIN,
+  },
+]
 
-export const RECURVE_BOWS: (Bow | SilverWeapon)[] = []
+export const RECURVE_BOWS: (Bow | SilverWeapon)[] = [
+  {
+    name: 'Recurve Bow',
+    rarity: 0,
+    src: new URL('@/assets/weapons/recurve_bow/45px-Recurve_Bow_1.png', import.meta.url),
+    move_speed_reduction: 40,
+    physical_weapon_damage: [30],
+    armor_penetration: 10,
+    class: [RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Recurve Bow',
+    rarity: 1,
+    src: new URL('@/assets/weapons/recurve_bow/45px-Recurve_Bow_2.png', import.meta.url),
+    move_speed_reduction: 40,
+    physical_weapon_damage: [31, 32],
+    armor_penetration: 10,
+    class: [RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Recurve Bow',
+    rarity: 2,
+    src: new URL('@/assets/weapons/recurve_bow/45px-Recurve_Bow_3.png', import.meta.url),
+    move_speed_reduction: 40,
+    physical_weapon_damage: [33, 34],
+    armor_penetration: 10,
+    class: [RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Recurve Bow',
+    rarity: 3,
+    src: new URL('@/assets/weapons/recurve_bow/45px-Recurve_Bow_4.png', import.meta.url),
+    move_speed_reduction: 40,
+    physical_weapon_damage: [35, 36],
+    armor_penetration: 10,
+    class: [RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Recurve Bow',
+    rarity: 4,
+    src: new URL('@/assets/weapons/recurve_bow/45px-Recurve_Bow_5.png', import.meta.url),
+    move_speed_reduction: 40,
+    physical_weapon_damage: [37],
+    armor_penetration: 10,
+    class: [RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Recurve Bow',
+    rarity: 5,
+    src: new URL('@/assets/weapons/recurve_bow/45px-Recurve_Bow_6.png', import.meta.url),
+    move_speed_reduction: 40,
+    physical_weapon_damage: [38],
+    armor_penetration: 10,
+    class: [RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Pestilence',
+    rarity: 6,
+    src: new URL('@/assets/weapons/recurve_bow/45px-Pestilence.png', import.meta.url),
+    move_speed_reduction: 40,
+    physical_weapon_damage: [40, 42],
+    armor_penetration: 10,
+    class: [RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Sterling Bow',
+    rarity: 1,
+    src: new URL('@/assets/weapons/recurve_bow/45px-Sterling_Bow.png', import.meta.url),
+    move_speed_reduction: 40,
+    physical_weapon_damage: [31, 32],
+    undead_damage_bonus: 15,
+    armor_penetration: 10,
+    class: [RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Bow of Righteousness',
+    rarity: 2,
+    src: new URL('@/assets/weapons/recurve_bow/45px-Bow_of_Righteousness.png', import.meta.url),
+    move_speed_reduction: 40,
+    physical_weapon_damage: [33, 34],
+    undead_damage_bonus: 15,
+    armor_penetration: 10,
+    class: [RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: 'Divine Bow',
+    rarity: 3,
+    src: new URL('@/assets/weapons/recurve_bow/45px-Divine_Bow.png', import.meta.url),
+    move_speed_reduction: 40,
+    physical_weapon_damage: [35, 36],
+    undead_damage_bonus: 15,
+    armor_penetration: 10,
+    class: [RANGER],
+    slot: TWOMAIN,
+  },
+  {
+    name: "Centaur's Madness",
+    rarity: 4,
+    src: new URL("@/assets/weapons/recurve_bow/45px-Centaur's_Madness.png", import.meta.url),
+    move_speed_reduction: 40,
+    physical_weapon_damage: [37],
+    armor_penetration: 15,
+    class: [RANGER],
+    slot: TWOMAIN,
+  },
+]
 
-export const RONDEL_DAGGERS: (Dagger | SilverWeapon)[] = []
+export const RONDEL_DAGGERS: (Dagger | SilverWeapon)[] = [
+  {
+    name: 'Rondel Dagger',
+    rarity: 0,
+    src: new URL('@/assets/weapons/rondel_dagger/45px-Rondel_Dagger_1.png', import.meta.url),
+    move_speed_reduction: 10,
+    physical_weapon_damage: [20],
+    armor_penetration: 5,
+    class: [WIZARD, ROGUE, BARD, DRUID],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Rondel Dagger',
+    rarity: 1,
+    src: new URL('@/assets/weapons/rondel_dagger/45px-Rondel_Dagger_2.png', import.meta.url),
+    move_speed_reduction: 10,
+    physical_weapon_damage: [21, 22],
+    armor_penetration: 5,
+    class: [WIZARD, ROGUE, BARD, DRUID],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Rondel Dagger',
+    rarity: 2,
+    src: new URL('@/assets/weapons/rondel_dagger/45px-Rondel_Dagger_3.png', import.meta.url),
+    move_speed_reduction: 10,
+    physical_weapon_damage: [23, 24],
+    armor_penetration: 5,
+    class: [WIZARD, ROGUE, BARD, DRUID],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Rondel Dagger',
+    rarity: 3,
+    src: new URL('@/assets/weapons/rondel_dagger/45px-Rondel_Dagger_4.png', import.meta.url),
+    move_speed_reduction: 10,
+    physical_weapon_damage: [24, 25],
+    armor_penetration: 5,
+    class: [WIZARD, ROGUE, BARD, DRUID],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Rondel Dagger',
+    rarity: 4,
+    src: new URL('@/assets/weapons/rondel_dagger/45px-Rondel_Dagger_5.png', import.meta.url),
+    move_speed_reduction: 10,
+    physical_weapon_damage: [26],
+    armor_penetration: 5,
+    class: [WIZARD, ROGUE, BARD, DRUID],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Rondel Dagger',
+    rarity: 5,
+    src: new URL('@/assets/weapons/rondel_dagger/45px-Rondel_Dagger_6.png', import.meta.url),
+    move_speed_reduction: 10,
+    physical_weapon_damage: [27],
+    armor_penetration: 5,
+    class: [WIZARD, ROGUE, BARD, DRUID],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Rondel Dagger',
+    rarity: 6,
+    src: new URL('@/assets/weapons/rondel_dagger/45px-Rondel_Dagger_6.png', import.meta.url),
+    move_speed_reduction: 10,
+    physical_weapon_damage: [28, 29],
+    armor_penetration: 5,
+    class: [WIZARD, ROGUE, BARD, DRUID],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Sterling Dagger',
+    rarity: 1,
+    src: new URL('@/assets/weapons/rondel_dagger/45px-Sterling_Dagger.png', import.meta.url),
+    move_speed_reduction: 10,
+    physical_weapon_damage: [21, 22],
+    armor_penetration: 5,
+    undead_damage_bonus: 15,
+    class: [WIZARD, ROGUE, BARD, DRUID],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Dagger of Righteousness',
+    rarity: 2,
+    src: new URL(
+      '@/assets/weapons/rondel_dagger/45px-Dagger_of_Righteousness.png',
+      import.meta.url,
+    ),
+    move_speed_reduction: 10,
+    physical_weapon_damage: [23, 24],
+    armor_penetration: 5,
+    undead_damage_bonus: 15,
+    class: [WIZARD, ROGUE, BARD, DRUID],
+    slot: ONEMAIN,
+  },
+  {
+    name: 'Divine Dagger',
+    rarity: 3,
+    src: new URL('@/assets/weapons/rondel_dagger/45px-Divine_Dagger.png', import.meta.url),
+    move_speed_reduction: 10,
+    physical_weapon_damage: [24, 25],
+    armor_penetration: 5,
+    undead_damage_bonus: 15,
+    class: [WIZARD, ROGUE, BARD, DRUID],
+    slot: ONEMAIN,
+  },
+]
 
-export const ROUND_SHIELDS: Shield[] = []
+export const ROUND_SHIELDS: Shield[] = [
+  {
+    name: 'Round Shield',
+    rarity: 0,
+    src: new URL('@/assets/weapons/round_shield/45px-Round_Shield_1.png', import.meta.url),
+    move_speed_reduction: 18,
+    armor_rating: [18, 19],
+    class: [FIGHTER, CLERIC, BARBARIAN],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Round Shield',
+    rarity: 1,
+    src: new URL('@/assets/weapons/round_shield/45px-Round_Shield_2.png', import.meta.url),
+    move_speed_reduction: 18,
+    armor_rating: [20, 21],
+    class: [FIGHTER, CLERIC, BARBARIAN],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Round Shield',
+    rarity: 2,
+    src: new URL('@/assets/weapons/round_shield/45px-Round_Shield_3.png', import.meta.url),
+    move_speed_reduction: 18,
+    armor_rating: [22, 24],
+    class: [FIGHTER, CLERIC, BARBARIAN],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Round Shield',
+    rarity: 3,
+    src: new URL('@/assets/weapons/round_shield/45px-Round_Shield_4.png', import.meta.url),
+    move_speed_reduction: 18,
+    armor_rating: [25, 27],
+    class: [FIGHTER, CLERIC, BARBARIAN],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Round Shield',
+    rarity: 4,
+    src: new URL('@/assets/weapons/round_shield/45px-Round_Shield_5.png', import.meta.url),
+    move_speed_reduction: 18,
+    armor_rating: [28, 30],
+    class: [FIGHTER, CLERIC, BARBARIAN],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Round Shield',
+    rarity: 5,
+    src: new URL('@/assets/weapons/round_shield/45px-Round_Shield_6.png', import.meta.url),
+    move_speed_reduction: 18,
+    armor_rating: [31, 33],
+    class: [FIGHTER, CLERIC, BARBARIAN],
+    slot: ONEOFF,
+  },
+  {
+    name: "Dryad's Wrath",
+    rarity: 6,
+    src: new URL("@/assets/weapons/round_shield/45px-Dryad's_Wrath.png", import.meta.url),
+    move_speed_reduction: 18,
+    armor_rating: [34, 36],
+    class: [FIGHTER, CLERIC, BARBARIAN],
+    slot: ONEOFF,
+  },
+]
+
+export const SHORT_SWORDS: (Sword | SilverWeapon)[] = [
+  {
+    name: 'Short Sword',
+    rarity: 0,
+    src: new URL('@/assets/weapons/short_sword/45px-Short_Sword_1.png', import.meta.url),
+    move_speed_reduction: 15,
+    physical_weapon_damage: [22],
+    class: [FIGHTER, ROGUE, RANGER, BARD],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Short Sword',
+    rarity: 1,
+    src: new URL('@/assets/weapons/short_sword/45px-Short_Sword_2.png', import.meta.url),
+    move_speed_reduction: 15,
+    physical_weapon_damage: [23, 24],
+    class: [FIGHTER, ROGUE, RANGER, BARD],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Short Sword',
+    rarity: 2,
+    src: new URL('@/assets/weapons/short_sword/45px-Short_Sword_3.png', import.meta.url),
+    move_speed_reduction: 15,
+    physical_weapon_damage: [25, 26],
+    class: [FIGHTER, ROGUE, RANGER, BARD],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Short Sword',
+    rarity: 3,
+    src: new URL('@/assets/weapons/short_sword/45px-Short_Sword_4.png', import.meta.url),
+    move_speed_reduction: 15,
+    physical_weapon_damage: [27, 28],
+    class: [FIGHTER, ROGUE, RANGER, BARD],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Short Sword',
+    rarity: 4,
+    src: new URL('@/assets/weapons/short_sword/45px-Short_Sword_5.png', import.meta.url),
+    move_speed_reduction: 15,
+    physical_weapon_damage: [29],
+    class: [FIGHTER, ROGUE, RANGER, BARD],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Short Sword',
+    rarity: 5,
+    src: new URL('@/assets/weapons/short_sword/45px-Short_Sword_6.png', import.meta.url),
+    move_speed_reduction: 15,
+    physical_weapon_damage: [30],
+    class: [FIGHTER, ROGUE, RANGER, BARD],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Short Sword',
+    rarity: 6,
+    src: new URL('@/assets/weapons/short_sword/45px-Short_Sword_6.png', import.meta.url),
+    move_speed_reduction: 15,
+    physical_weapon_damage: [31, 32],
+    class: [FIGHTER, ROGUE, RANGER, BARD],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Sterling Short Sword',
+    rarity: 1,
+    src: new URL('@/assets/weapons/short_sword/45px-Sterling_Short_Sword.png', import.meta.url),
+    move_speed_reduction: 15,
+    physical_weapon_damage: [23, 24],
+    undead_damage_bonus: 15,
+    class: [FIGHTER, ROGUE, RANGER, BARD],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Short Sword of Righteousness',
+    rarity: 2,
+    src: new URL(
+      '@/assets/weapons/short_sword/45px-Short_Sword_of_Righteousness.png',
+      import.meta.url,
+    ),
+    move_speed_reduction: 15,
+    physical_weapon_damage: [25, 26],
+    undead_damage_bonus: 15,
+    class: [FIGHTER, ROGUE, RANGER, BARD],
+    slot: ONEOFF,
+  },
+  {
+    name: 'Divine Short Sword',
+    rarity: 3,
+    src: new URL('@/assets/weapons/short_sword/45px-Divine_Short_Sword.png', import.meta.url),
+    move_speed_reduction: 15,
+    physical_weapon_damage: [27, 28],
+    undead_damage_bonus: 15,
+    class: [FIGHTER, ROGUE, RANGER, BARD],
+    slot: ONEOFF,
+  },
+]
 
 export const SPEARS: Polearm[] = []
 
