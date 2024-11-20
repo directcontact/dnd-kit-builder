@@ -78,16 +78,24 @@ export interface Armor {
   armor_rating: number[]
 }
 
+export interface SpearOfRot extends Polearm {
+  true_physical_damage: number
+  crafted?: true
+}
+
 export interface DemonsGlee extends Sword {
   magical_weapon_damage: number
+  crafted?: true
 }
 
 export interface TrollsBane extends Mace {
   max_health_bonus: number[]
+  crafted?: true
 }
 
 export interface VoidBlade extends Sword {
   magical_weapon_damage: number[]
+  crafted?: true
 }
 
 export interface SovereignsGhostblade extends CrystalSword {
@@ -122,6 +130,7 @@ export interface LightBringer extends Mace {
 
 export interface Grimslayer extends Sword {
   undead_damage_bonus: number
+  physical_power: number
   crafted?: true
 }
 
