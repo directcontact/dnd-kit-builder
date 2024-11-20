@@ -1,4 +1,4 @@
-import type { Class } from './class'
+import type { Class } from './dnd-class'
 import type { Slot } from './slot'
 
 export interface Weapon {
