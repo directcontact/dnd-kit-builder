@@ -9,36 +9,30 @@ export interface Weapon {
 }
 
 export interface Sword extends Weapon {
-  physical_weapon_damage_low: number
-  physical_weapon_damage_high: number
+  physical_weapon_damage: number[]
 }
 
 export interface Polearm extends Weapon {
-  physical_weapon_damage_low: number
-  physical_weapon_damage_high: number
+  physical_weapon_damage: number[]
 }
 
 export interface Axe extends Weapon {
-  physical_weapon_damage_low: number
-  physical_weapon_damage_high: number
+  physical_weapon_damage: number[]
 }
 
 export interface Bow extends Weapon {
-  physical_weapon_damage_low: number
-  physical_weapon_damage_high: number
+  physical_weapon_damage: number[]
   armor_penetration: number
 }
 
 export interface Crossbow extends Weapon {
-  physical_weapon_damage_low: number
-  physical_weapon_damage_high: number
+  physical_weapon_damage: number[]
   armor_penetration: number
 }
 
 export interface Staff extends Weapon {
-  physical_weapon_damage_low: number
-  physical_weapon_damage_high: number
-  magical_healing_add: number
+  physical_weapon_damage: number[]
+  magical_healing: number
   magical_damage: number
   magic_penetration: number
 }
@@ -49,9 +43,13 @@ export interface Spellbook extends Weapon {
 }
 
 export interface Dagger extends Weapon {
-  physical_weapon_damage_low: number
-  physical_weapon_damage_high: number
+  physical_weapon_damage: number[]
   armor_penetration: number
+}
+
+export interface CrystalSword extends Weapon {
+  physical_weapon_damage: number[]
+  magical_weapon_damage: number[]
 }
 
 export interface CrystalBall extends Weapon {
@@ -60,49 +58,66 @@ export interface CrystalBall extends Weapon {
   magic_penetration: number
 }
 
-export interface FlangedMace extends Weapon {
-  armor_penetration: 15
+export interface Mace extends Weapon {
+  physical_weapon_damage: number[]
+  armor_penetration: number[]
+}
+
+export interface Shield extends Weapon {
+  armor_rating: number[]
+}
+
+export interface LanternShield extends Shield {
+  physical_weapon_damage: number[]
+}
+
+export interface Armor {
+  name: string
+  armor_rating: number[]
+}
+
+export interface SovereignsGhostblade extends CrystalSword {
+  move_speed_bonus: number
+  magical_healing: number
+  crafted?: true
 }
 
 export interface IceFang extends Dagger {
   true_physical_damage: number
+  crafted?: true
 }
 
 export interface CyclopsVisionCrystal extends CrystalBall {
   dexterity: 2
   strength: 2
   knowledge: 2
+  crafted?: true
 }
 
 export interface ManaSphere extends CrystalBall {
   will: number
   knowledge: number
-  true_magical_damage_low: number
-  true_magical_damage_high: number
+  true_magical_damage: number[]
+  crafted?: true
 }
 
-export interface LightBringer extends FlangedMace {
-  physical_weapon_damage_low: number
-  physical_weapon_damage_high: number
-  action_speed: number | null
+export interface LightBringer extends Mace {
+  action_speed: number[]
+  crafted?: true
+}
+
+export interface Grimslayer extends Sword {
+  undead_damage_bonus: number
+  crafted?: true
 }
 
 export interface SilverWeapon extends Weapon {
   undead_damage_bonus: number
+  crafted?: true
 }
 
-export interface Shield extends Weapon {
-  armor_rating_low: number
-  armor_rating_high: number
-}
-
-export interface LanternShield extends Shield {
-  physical_weapon_damage_low: number
-  physical_weapon_damage_high: number
-}
-
-export interface Armor {
-  name: string
-  armor_rating_low: number
-  armor_rating_high: number
+export interface GoldenWeapon extends Weapon {
+  luck: number
+  magical_damage_reduction: number
+  crafted?: true
 }
