@@ -35,7 +35,7 @@ import {
   calculateMagicPowerBonus,
 } from '@/composables/useCalculateStat'
 
-const userClass = ref(FIGHTER)
+const userClass = ref(WIZARD)
 const currentStats = ref(userClass.value.stats)
 const armorRating = ref(0)
 const luck = ref(0)
@@ -240,13 +240,34 @@ const displayedStats = ref({
         </div>
       </div>
       <div class="border-2 border-black-500 w-1/3 h-full rounded-md p-3 relative">
-        <div class="border-2 w-20 h-20 absolute"></div>
-        <div class="border-2 w-10 h-10 absolute"></div>
-        <div class="border-2 w-10 h-10 absolute"></div>
+        <!-- HELMET -->
+        <div class="border-2 w-24 h-24 absolute top-[10%] left-[41%]"></div>
+        <!-- NECKLACE -->
+        <div class="border-2 w-10 h-10 absolute top-[17.5%] left-[61.5%]"></div>
+        <!-- FIRST SET OF WEAPON -->
+        <div class="w-32 h-48 absolute left-4 top-12 flex flex-row">
+          <div class="border-l-2 border-t-2 border-b-2 w-1/2"></div>
+          <div class="border-2 w-1/2"></div>
+        </div>
+        <!-- TORSO -->
+        <div class="border-2 w-36 h-56 absolute left-1/2 -translate-x-1/2 top-[24%]"></div>
+        <!-- SECOND SET OF WEAPON -->
+        <div class="w-32 h-48 absolute right-4 top-12 flex flex-row">
+          <div class="border-l-2 border-t-2 border-b-2 w-1/2"></div>
+          <div class="border-2 w-1/2"></div>
+        </div>
+        <!-- RING ONE -->
+        <div class="border-2 w-10 h-10 absolute top-[48.2%] left-[25.3%]"></div>
+        <!-- RING TWO -->
+        <div class="border-2 w-10 h-10 absolute top-[48.2%] right-[25.3%]"></div>
+        <!-- GLOVES -->
+        <div class="border-2 w-24 h-24 absolute top-[55.5%] left-[14.5%]"></div>
+        <!-- BOOTS -->
+        <div class="border-2 w-24 h-24 absolute top-[55.5%] right-[14.5%]"></div>
+        <!-- PANTS -->
+        <div class="border-2 w-36 h-56 absolute left-1/2 -translate-x-1/2 top-[55.5%]"></div>
       </div>
-      <div class="border-2 border-black-500 w-1/3 h-full rounded-md">
-        search items or saved items
-      </div>
+      <div class="border-2 border-black-500 w-1/3 h-full rounded-md"></div>
     </div>
   </main>
 </template>

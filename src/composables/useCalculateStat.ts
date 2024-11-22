@@ -125,7 +125,7 @@ export function calculateMoveSpeed(agility: number, moveSpeedBonus: number, move
     moveSpeed = 330
   }
 
-  return { moveSpeed: moveSpeed, moveSpeedPercent: moveSpeed / 3 }
+  return { moveSpeed: moveSpeed, moveSpeedPercent: (moveSpeed / 3).toFixed(2) }
 }
 
 export function calculateActionSpeed(agility: number, dexterity: number, actionSpeedAdd: number) {
@@ -152,7 +152,7 @@ export function calculateActionSpeed(agility: number, dexterity: number, actionS
     actionSpeed = 57.5
   }
 
-  return actionSpeed * 100
+  return (actionSpeed * 100).toFixed(2)
 }
 
 export function calculateManualDexterity(dexterity: number) {
@@ -204,7 +204,7 @@ export function calculateSpellCastingSpeed(knowledge: number, spellCastSpeedAdd:
     spellCastingSpeed = 180
   }
 
-  return spellCastingSpeed * 100
+  return (spellCastingSpeed * 100).toFixed(2)
 }
 
 export function calculateItemEquipSpeed(dexterity: number) {
