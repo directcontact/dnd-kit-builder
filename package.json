@@ -14,8 +14,12 @@
   },
   "dependencies": {
     "pinia": "^2.2.6",
+    "primevue": "^4.2.3",
+    "react-dnd-html5-backend": "^16.0.1",
+    "tailwindcss-primeui": "^0.3.4",
     "vue": "^3.5.12",
-    "vue-router": "^4.4.5"
+    "vue-router": "^4.4.5",
+    "vue3-dnd": "^2.1.0"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.0",
@@ -29,6 +33,7 @@
     "eslint-plugin-vue": "^9.30.0",
     "npm-run-all2": "^7.0.1",
     "postcss": "^8.4.49",
+    "postcss-import": "^16.1.0",
     "prettier": "^3.3.3",
     "tailwindcss": "^3.4.15",
     "typescript": "~5.6.3",

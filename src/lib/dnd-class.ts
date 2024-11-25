@@ -130,3 +130,5 @@ export const BARD: DNDClass = {
     resourcefulness: 15,
   },
 }
+
+export const ALL_CLASSES = [BARD, WARLOCK, WIZARD, ROGUE, FIGHTER, DRUID, BARBARIAN, RANGER, CLERIC]

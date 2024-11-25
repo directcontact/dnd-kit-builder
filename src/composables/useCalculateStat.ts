@@ -265,7 +265,7 @@ export function calculateRegularInteractionSpeed(
     regularInteractionSpeed = 250
   }
 
-  return regularInteractionSpeed * 100
+  return (regularInteractionSpeed * 100).toFixed(2)
 }
 
 export function calculateMagicalInteractionSpeed(will: number, magicalInteractionSpeedAdd: number) {
@@ -293,7 +293,7 @@ export function calculateMagicalInteractionSpeed(will: number, magicalInteractio
     magicalInteractionSpeed = 250
   }
 
-  return magicalInteractionSpeed * 100
+  return (magicalInteractionSpeed * 100).toFixed(2)
 }
 
 export function calculatePersuasiveness(resourcefulness: number) {
@@ -639,5 +639,5 @@ export function calculateMagicPowerBonus(magicPower: number, magicDamageBonus: n
     magicPower = 88
   }
 
-  return magicPowerBonus * 100
+  return (magicPowerBonus * 100).toFixed(2)
 }

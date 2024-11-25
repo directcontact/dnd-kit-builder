@@ -40,6 +40,11 @@ import type {
 
 import { ONEMAIN, ONEOFF, TWOMAIN } from '@/typings/slot'
 
+export type WeaponSelect = {
+  name: string
+  weapons: Weapon[]
+}
+
 export const ARMING_SWORDS: Sword[] = [
   {
     name: 'Arming Sword',
@@ -2526,7 +2531,7 @@ export const ROUND_SHIELDS: Shield[] = [
   {
     name: 'Round Shield',
     rarity: 0,
-    src: new URL('@/assets/weapons/round_shield/45px-Round_Shield_1.png', import.meta.url),
+    src: new URL('@/assets/weapons/round_shield/90px-Round_Shield_1.png', import.meta.url),
     move_speed_reduction: 18,
     armor_rating: [18, 19],
     class: [FIGHTER.name, CLERIC.name, BARBARIAN.name],
@@ -2535,7 +2540,7 @@ export const ROUND_SHIELDS: Shield[] = [
   {
     name: 'Round Shield',
     rarity: 1,
-    src: new URL('@/assets/weapons/round_shield/45px-Round_Shield_2.png', import.meta.url),
+    src: new URL('@/assets/weapons/round_shield/90px-Round_Shield_2.png', import.meta.url),
     move_speed_reduction: 18,
     armor_rating: [20, 21],
     class: [FIGHTER.name, CLERIC.name, BARBARIAN.name],
@@ -2544,7 +2549,7 @@ export const ROUND_SHIELDS: Shield[] = [
   {
     name: 'Round Shield',
     rarity: 2,
-    src: new URL('@/assets/weapons/round_shield/45px-Round_Shield_3.png', import.meta.url),
+    src: new URL('@/assets/weapons/round_shield/90px-Round_Shield_3.png', import.meta.url),
     move_speed_reduction: 18,
     armor_rating: [22, 24],
     class: [FIGHTER.name, CLERIC.name, BARBARIAN.name],
@@ -2553,7 +2558,7 @@ export const ROUND_SHIELDS: Shield[] = [
   {
     name: 'Round Shield',
     rarity: 3,
-    src: new URL('@/assets/weapons/round_shield/45px-Round_Shield_4.png', import.meta.url),
+    src: new URL('@/assets/weapons/round_shield/90px-Round_Shield_4.png', import.meta.url),
     move_speed_reduction: 18,
     armor_rating: [25, 27],
     class: [FIGHTER.name, CLERIC.name, BARBARIAN.name],
@@ -2562,7 +2567,7 @@ export const ROUND_SHIELDS: Shield[] = [
   {
     name: 'Round Shield',
     rarity: 4,
-    src: new URL('@/assets/weapons/round_shield/45px-Round_Shield_5.png', import.meta.url),
+    src: new URL('@/assets/weapons/round_shield/90px-Round_Shield_5.png', import.meta.url),
     move_speed_reduction: 18,
     armor_rating: [28, 30],
     class: [FIGHTER.name, CLERIC.name, BARBARIAN.name],
@@ -2571,7 +2576,7 @@ export const ROUND_SHIELDS: Shield[] = [
   {
     name: 'Round Shield',
     rarity: 5,
-    src: new URL('@/assets/weapons/round_shield/45px-Round_Shield_6.png', import.meta.url),
+    src: new URL('@/assets/weapons/round_shield/90px-Round_Shield_6.png', import.meta.url),
     move_speed_reduction: 18,
     armor_rating: [31, 33],
     class: [FIGHTER.name, CLERIC.name, BARBARIAN.name],
@@ -2580,7 +2585,7 @@ export const ROUND_SHIELDS: Shield[] = [
   {
     name: "Dryad's Wrath",
     rarity: 6,
-    src: new URL("@/assets/weapons/round_shield/45px-Dryad's_Wrath.png", import.meta.url),
+    src: new URL("@/assets/weapons/round_shield/90px-Dryad's_Wrath.png", import.meta.url),
     move_speed_reduction: 18,
     armor_rating: [34, 36],
     class: [FIGHTER.name, CLERIC.name, BARBARIAN.name],
@@ -2849,7 +2854,7 @@ export const STILETTO_DAGGERS: Dagger[] = [
   {
     name: 'Stiletto Dagger',
     rarity: 0,
-    src: new URL('@/assets/weapons/stiletto_dagger/90px-Stiletto_Dagger_1.png', import.meta.url),
+    src: new URL('@/assets/weapons/stiletto_dagger/45px-Stiletto_Dagger_1.png', import.meta.url),
     move_speed_reduction: 10,
     physical_weapon_damage: [20],
     armor_penetration: 5,
@@ -2859,7 +2864,7 @@ export const STILETTO_DAGGERS: Dagger[] = [
   {
     name: 'Stiletto Dagger',
     rarity: 1,
-    src: new URL('@/assets/weapons/stiletto_dagger/90px-Stiletto_Dagger_2.png', import.meta.url),
+    src: new URL('@/assets/weapons/stiletto_dagger/45px-Stiletto_Dagger_2.png', import.meta.url),
     move_speed_reduction: 10,
     physical_weapon_damage: [21, 22],
     armor_penetration: 5,
@@ -2869,7 +2874,7 @@ export const STILETTO_DAGGERS: Dagger[] = [
   {
     name: 'Stiletto Dagger',
     rarity: 2,
-    src: new URL('@/assets/weapons/stiletto_dagger/90px-Stiletto_Dagger_3.png', import.meta.url),
+    src: new URL('@/assets/weapons/stiletto_dagger/45px-Stiletto_Dagger_3.png', import.meta.url),
     move_speed_reduction: 10,
     physical_weapon_damage: [23, 24],
     armor_penetration: 5,
@@ -2879,7 +2884,7 @@ export const STILETTO_DAGGERS: Dagger[] = [
   {
     name: 'Stiletto Dagger',
     rarity: 3,
-    src: new URL('@/assets/weapons/stiletto_dagger/90px-Stiletto_Dagger_4.png', import.meta.url),
+    src: new URL('@/assets/weapons/stiletto_dagger/45px-Stiletto_Dagger_4.png', import.meta.url),
     move_speed_reduction: 10,
     physical_weapon_damage: [24, 25],
     armor_penetration: 5,
@@ -2889,7 +2894,7 @@ export const STILETTO_DAGGERS: Dagger[] = [
   {
     name: 'Stiletto Dagger',
     rarity: 4,
-    src: new URL('@/assets/weapons/stiletto_dagger/90px-Stiletto_Dagger_5.png', import.meta.url),
+    src: new URL('@/assets/weapons/stiletto_dagger/45px-Stiletto_Dagger_5.png', import.meta.url),
     move_speed_reduction: 10,
     physical_weapon_damage: [26],
     armor_penetration: 5,
@@ -2899,7 +2904,7 @@ export const STILETTO_DAGGERS: Dagger[] = [
   {
     name: 'Stiletto Dagger',
     rarity: 5,
-    src: new URL('@/assets/weapons/stiletto_dagger/90px-Stiletto_Dagger_6.png', import.meta.url),
+    src: new URL('@/assets/weapons/stiletto_dagger/45px-Stiletto_Dagger_6.png', import.meta.url),
     move_speed_reduction: 10,
     physical_weapon_damage: [27],
     armor_penetration: 5,
@@ -2909,7 +2914,7 @@ export const STILETTO_DAGGERS: Dagger[] = [
   {
     name: 'Deathbloom',
     rarity: 6,
-    src: new URL('@/assets/weapons/stiletto_dagger/90px-Deathbloom.png', import.meta.url),
+    src: new URL('@/assets/weapons/stiletto_dagger/45px-Deathbloom.png', import.meta.url),
     move_speed_reduction: 10,
     physical_weapon_damage: [28, 29],
     armor_penetration: 5,
@@ -2922,7 +2927,7 @@ export const SURVIVAL_BOWS: Bow[] = [
   {
     name: 'Survival Bow',
     rarity: 0,
-    src: new URL('@/assets/weapons/survival_bow/90px-Survival_Bow_1.png', import.meta.url),
+    src: new URL('@/assets/weapons/survival_bow/45px-Survival_Bow_1.png', import.meta.url),
     move_speed_reduction: 30,
     physical_weapon_damage: [19],
     armor_penetration: 5,
@@ -2932,7 +2937,7 @@ export const SURVIVAL_BOWS: Bow[] = [
   {
     name: 'Survival Bow',
     rarity: 1,
-    src: new URL('@/assets/weapons/survival_bow/90px-Survival_Bow_2.png', import.meta.url),
+    src: new URL('@/assets/weapons/survival_bow/45px-Survival_Bow_2.png', import.meta.url),
     move_speed_reduction: 30,
     physical_weapon_damage: [20, 21],
     armor_penetration: 5,
@@ -2942,7 +2947,7 @@ export const SURVIVAL_BOWS: Bow[] = [
   {
     name: 'Survival Bow',
     rarity: 2,
-    src: new URL('@/assets/weapons/survival_bow/90px-Survival_Bow_3.png', import.meta.url),
+    src: new URL('@/assets/weapons/survival_bow/45px-Survival_Bow_3.png', import.meta.url),
     move_speed_reduction: 30,
     physical_weapon_damage: [22, 23],
     armor_penetration: 5,
@@ -2952,7 +2957,7 @@ export const SURVIVAL_BOWS: Bow[] = [
   {
     name: 'Survival Bow',
     rarity: 3,
-    src: new URL('@/assets/weapons/survival_bow/90px-Survival_Bow_4.png', import.meta.url),
+    src: new URL('@/assets/weapons/survival_bow/45px-Survival_Bow_4.png', import.meta.url),
     move_speed_reduction: 30,
     physical_weapon_damage: [24, 25],
     armor_penetration: 5,
@@ -2962,7 +2967,7 @@ export const SURVIVAL_BOWS: Bow[] = [
   {
     name: 'Survival Bow',
     rarity: 4,
-    src: new URL('@/assets/weapons/survival_bow/90px-Survival_Bow_5.png', import.meta.url),
+    src: new URL('@/assets/weapons/survival_bow/45px-Survival_Bow_5.png', import.meta.url),
     move_speed_reduction: 30,
     physical_weapon_damage: [26],
     armor_penetration: 5,
@@ -2972,7 +2977,7 @@ export const SURVIVAL_BOWS: Bow[] = [
   {
     name: 'Survival Bow',
     rarity: 5,
-    src: new URL('@/assets/weapons/survival_bow/90px-Survival_Bow_6.png', import.meta.url),
+    src: new URL('@/assets/weapons/survival_bow/45px-Survival_Bow_6.png', import.meta.url),
     move_speed_reduction: 30,
     physical_weapon_damage: [27],
     armor_penetration: 5,
@@ -2982,7 +2987,7 @@ export const SURVIVAL_BOWS: Bow[] = [
   {
     name: 'Elven Bow of Truth',
     rarity: 6,
-    src: new URL('@/assets/weapons/survival_bow/90px-Elven_Bow_of_Truth.png', import.meta.url),
+    src: new URL('@/assets/weapons/survival_bow/45px-Elven_Bow_of_Truth.png', import.meta.url),
     move_speed_reduction: 30,
     physical_weapon_damage: [28, 29],
     armor_penetration: 5,
@@ -3427,3 +3432,8 @@ export const ALL_WEAPONS: Weapon[][] = [
   WINDLASS_CROSSBOWS,
   ZWEIHANDERS,
 ]
+
+export const ALL_WEAPONS_SELECT: WeaponSelect[] = ALL_WEAPONS.map((weapon) => ({
+  name: weapon[0].name,
+  weapons: weapon,
+}))

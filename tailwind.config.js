@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import * as primeui from 'tailwindcss-primeui'
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
@@ -8,7 +9,7 @@ export default {
         'dnd-yellow-hover': 'rgba(241, 185, 62, 1)',
         'dnd-white': 'rgb(238, 238, 238)',
         'dnd-blue': '#1F263F',
-        'dnd-black': 'rgba(25, 29, 36, 0.7)',
+        'dnd-black': '#191d24b3',
         junk: 'rgb(50, 50, 50)',
         poor: 'rgb(100, 100, 100)',
         common: 'rgb(222, 222, 222)',
@@ -20,5 +21,6 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [primeui],
+  darkMode: 'class',
 }
