@@ -26,7 +26,17 @@ import {
 } from '@/composables/useCalculateStat'
 import { ALL_WEAPONS_SELECT } from '@/lib/weapons'
 import type { WeaponSelect } from '@/lib/weapons'
-import { MultiSelect, Select, Tabs, TabList, Tab, TabPanels, TabPanel } from 'primevue'
+import {
+  MultiSelect,
+  Select,
+  Tabs,
+  TabList,
+  Tab,
+  TabPanels,
+  TabPanel,
+  Dialog,
+  Button,
+} from 'primevue'
 import type { Weapon, Armor } from '@/typings/equip'
 import DraggableEquipment from '@/components/DraggableEquipment.vue'
 import { useDrop } from 'vue3-dnd'
@@ -35,12 +45,29 @@ const [collectedProps, drop] = useDrop(() => ({
   accept: ['BOX'],
 }))
 
+type AttributedModifier = {
+  stat: string
+  statName: string
+  statValue: number
+}
+
+type EquipmentDetails = {
+  rarity: number
+  modifiers: AttributedModifier[]
+}
+
 const selectedSearchWeapons = ref<WeaponSelect[]>([])
 const selectedSearchArmor = ref<Armor[]>([])
 const selectedSearchAccessories = ref<Weapon[]>([])
 const selectedSavedWeapons = ref<WeaponSelect[]>([])
 const selectedSavedArmor = ref<Armor[]>([])
 const selectedSavedAccessories = ref<Weapon[]>([])
+const visible = ref(false)
+const currentEquipment = ref<WeaponSelect | null>(null)
+const currentEquipmentDetails = ref<EquipmentDetails>({
+  rarity: 0,
+  modifiers: [],
+})
 
 const userClass = ref(ALL_CLASSES[0])
 const currentStats = computed(() => userClass.value.stats)
@@ -78,7 +105,7 @@ const buffDuration = computed(() => calculateBuffDuration(currentStats.value.wil
 const debuffDuration = computed(() => calculateDebuffDuration(currentStats.value.will, 0))
 const pdr = computed(() => calculatePhysicalDamageReduction(armorRating.value, 0))
 const magicResistance = computed(() => calculateMagicResistance(currentStats.value.will, 0))
-const mdr = computed(() => calculateMagicDamageReduction(magicResistance.value, 0))
+const mdr = computed(() => calculateMagicDamageReduction(Number(magicResistance.value), 0))
 const physicalPower = computed(() => calculatePhysicalPower(currentStats.value.strength, 0))
 const physicalPowerBonus = computed(() => calculatePhysicalPowerBonus(physicalPower.value, 0))
 const magicPower = computed(() => calculateMagicPower(currentStats.value.will, 0))
@@ -230,6 +257,11 @@ const displayedStats = computed(() => ({
     value: 0,
   },
 }))
+
+function handleCreateEquipment(equipment: any) {
+  currentEquipment.value = equipment
+  visible.value = true
+}
 </script>
 
 <template>
@@ -332,6 +364,7 @@ const displayedStats = computed(() => ({
                 >
                   <div
                     class="text-dnd-white flex items-center flex-col p-3 border-2 w-24 h-fit-content m-1 cursor-pointer"
+                    @click="handleCreateEquipment(selectedWeapon)"
                   >
                     <img :src="selectedWeapon.weapons[0].src" />
                     <div class="text-sm">{{ selectedWeapon.name }}</div>
@@ -388,5 +421,20 @@ const displayedStats = computed(() => ({
         </Tabs>
       </div>
     </div>
+    <Dialog
+      class="dark bg-surface-950 text-surface-400"
+      v-model:visible="visible"
+      modal
+      header="Create"
+      :style="{ width: '25rem' }"
+    >
+      <div class="flex items-center">
+        <img :src="currentEquipment?.weapons[currentEquipmentDetails?.rarity].src" />
+      </div>
+      <div class="flex justify-end gap-2">
+        <Button type="button" label="Cancel" severity="secondary" @click="visible = false"></Button>
+        <Button type="button" label="Save" @click="visible = false"></Button>
+      </div>
+    </Dialog>
   </main>
 </template>

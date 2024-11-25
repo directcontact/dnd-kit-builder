@@ -10,6 +10,15 @@ export interface Weapon {
   slot: Slot
 }
 
+export interface Accessories {
+  name: string
+  rarity: number
+  src: URL
+  stat: string
+  statName: string
+  statValue: number
+}
+
 export interface Sword extends Weapon {
   physical_weapon_damage: number[]
 }
