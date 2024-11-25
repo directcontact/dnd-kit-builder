@@ -5,5 +5,4 @@ interface CoreModifier {
   statName: string
   statValues: number[]
   slot: Slot[]
-  type: 'Weapon' | 'Armor' | 'Accessories'
 }
