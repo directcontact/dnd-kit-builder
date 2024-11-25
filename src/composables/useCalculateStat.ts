@@ -3,7 +3,7 @@ export function calculateHealth(
   strength: number,
   maxHealthAdd: number,
   maxHealthBonus: number,
-): number {
+) {
   const healthPoints: number = strength * 0.25 + vigor * 0.75
   let calculatedHealth = 0
 
@@ -25,7 +25,7 @@ export function calculateHealth(
     calculatedHealth = 207.5
   }
 
-  return calculatedHealth
+  return calculatedHealth.toFixed(2)
 }
 
 export function calculateMemoryCapacity(
@@ -49,7 +49,7 @@ export function calculateMemoryCapacity(
   return calculatedMemoryCapacity
 }
 
-export function calculateHealthRecoveryBonus(vigor: number): number {
+export function calculateHealthRecoveryBonus(vigor: number) {
   let healthRecovery = 0
 
   if (vigor >= 0 && vigor < 5) {
@@ -74,10 +74,10 @@ export function calculateHealthRecoveryBonus(vigor: number): number {
     healthRecovery = 250
   }
 
-  return healthRecovery * 100
+  return (healthRecovery * 100).toFixed(2)
 }
 
-export function calculateSpellRecovery(knowledge: number): number {
+export function calculateSpellRecovery(knowledge: number) {
   let spellRecovery = 0
 
   if (knowledge >= 0 && knowledge < 28) {
@@ -100,7 +100,7 @@ export function calculateSpellRecovery(knowledge: number): number {
     spellRecovery = 250
   }
 
-  return spellRecovery * 100
+  return (spellRecovery * 100).toFixed(2)
 }
 
 export function calculateMoveSpeed(agility: number, moveSpeedBonus: number, moveSpeedAdd: number) {
@@ -125,7 +125,7 @@ export function calculateMoveSpeed(agility: number, moveSpeedBonus: number, move
     moveSpeed = 330
   }
 
-  return { moveSpeed: moveSpeed, moveSpeedPercent: (moveSpeed / 3).toFixed(2) }
+  return { moveSpeed: moveSpeed.toFixed(2), moveSpeedPercent: (moveSpeed / 3).toFixed(2) }
 }
 
 export function calculateActionSpeed(agility: number, dexterity: number, actionSpeedAdd: number) {
@@ -178,7 +178,7 @@ export function calculateManualDexterity(dexterity: number) {
     manualDexterity = 55
   }
 
-  return manualDexterity * 100
+  return (manualDexterity * 100).toFixed(2)
 }
 
 export function calculateSpellCastingSpeed(knowledge: number, spellCastSpeedAdd: number) {
@@ -228,7 +228,7 @@ export function calculateItemEquipSpeed(dexterity: number) {
     itemEquipSpeed = 200
   }
 
-  return itemEquipSpeed * 100
+  return (itemEquipSpeed * 100).toFixed(2)
 }
 
 export function calculateRegularInteractionSpeed(
@@ -339,7 +339,7 @@ export function calculateBuffDuration(will: number, buffDurationAdd: number) {
     buffDuration = 60
   }
 
-  return buffDuration * 100
+  return (buffDuration * 100).toFixed(2)
 }
 
 export function calculateDebuffDuration(will: number, debuffDurationAdd: number) {
@@ -473,7 +473,7 @@ export function calculateDebuffDuration(will: number, debuffDurationAdd: number)
     debuffDuration = -37.5
   }
 
-  return debuffDuration * 100
+  return (debuffDuration * 100).toFixed(2)
 }
 
 export function calculatePhysicalDamageReduction(armorRating: number, pdrAdd: number) {
@@ -523,7 +523,7 @@ export function calculatePhysicalDamageReduction(armorRating: number, pdrAdd: nu
     pdr = 71.45
   }
 
-  return pdr * 100
+  return (pdr * 100).toFixed(2)
 }
 
 export function calculateMagicResistance(will: number, magicResistanceAdd: number) {
@@ -545,7 +545,7 @@ export function calculateMagicResistance(will: number, magicResistanceAdd: numbe
 
   mr += magicResistanceAdd
 
-  return mr
+  return mr.toFixed(2)
 }
 
 export function calculateMagicDamageReduction(magicResistance: number, mdrAdd: number) {
@@ -569,7 +569,7 @@ export function calculateMagicDamageReduction(magicResistance: number, mdrAdd: n
     mdr = 95
   }
 
-  return mdr * 100
+  return (mdr * 100).toFixed(2)
 }
 
 export function calculatePhysicalPower(strength: number, physicalPowerAdd: number) {
@@ -603,7 +603,7 @@ export function calculatePhysicalPowerBonus(physicalPower: number, physicalDamag
     physicalPowerBonus = 60
   }
 
-  return physicalPowerBonus * 100
+  return (physicalPowerBonus * 100).toFixed(2)
 }
 
 export function calculateMagicPower(will: number, magicPowerAdd: number) {

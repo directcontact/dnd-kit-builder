@@ -26,15 +26,10 @@ import {
 } from '@/composables/useCalculateStat'
 import { ALL_WEAPONS_SELECT } from '@/lib/weapons'
 import type { WeaponSelect } from '@/lib/weapons'
-import { MultiSelect } from 'primevue'
+import { MultiSelect, Select, Tabs, TabList, Tab, TabPanels, TabPanel } from 'primevue'
 import type { Weapon, Armor } from '@/typings/equip'
 import DraggableEquipment from '@/components/DraggableEquipment.vue'
 import { useDrop } from 'vue3-dnd'
-import Tabs from 'primevue/tabs'
-import TabList from 'primevue/tablist'
-import Tab from 'primevue/tab'
-import TabPanels from 'primevue/tabpanels'
-import TabPanel from 'primevue/tabpanel'
 
 const [collectedProps, drop] = useDrop(() => ({
   accept: ['BOX'],
@@ -48,7 +43,7 @@ const selectedSavedArmor = ref<Armor[]>([])
 const selectedSavedAccessories = ref<Weapon[]>([])
 
 const userClass = ref(ALL_CLASSES[0])
-const currentStats = ref(userClass.value.stats)
+const currentStats = computed(() => userClass.value.stats)
 const armorRating = ref(0)
 const luck = ref(0)
 const armorPenetration = ref(0)
@@ -89,7 +84,7 @@ const physicalPowerBonus = computed(() => calculatePhysicalPowerBonus(physicalPo
 const magicPower = computed(() => calculateMagicPower(currentStats.value.will, 0))
 const magicPowerBonus = computed(() => calculateMagicPowerBonus(magicPower.value, 0))
 
-const displayedStats = ref({
+const displayedStats = computed(() => ({
   strength: {
     label: 'Strength',
     value: currentStats.value.strength,
@@ -234,16 +229,19 @@ const displayedStats = ref({
     label: 'Secondary Weapon',
     value: 0,
   },
-})
+}))
 </script>
 
 <template>
   <main
-    class="text-dnd-white bg-[url('@/assets/background.webp')] bg-cover w-screen h-screen flex justify-center items-center"
+    class="text-dnd-white bg-[url('@/assets/background.webp')] bg-cover w-screen h-screen flex justify-center items-center dark"
   >
     <div class="w-5/6 bg-dnd-black h-5/6 p-3 rounded-md flex flex-row space-x-3">
       <div class="border-2 border-black-500 w-1/3 h-full rounded-md p-3 overflow-y-scroll">
-        <div class="w-full text-center">Class: {{ userClass.name }}</div>
+        <div class="w-full text-center">
+          Class:
+          <Select v-model="userClass" :options="ALL_CLASSES" optionLabel="name" size="small" />
+        </div>
         <div
           class="w-full flex justify-between"
           v-for="stat of displayedStats"
@@ -284,7 +282,7 @@ const displayedStats = ref({
       <div
         class="border-2 border-black-500 w-1/3 h-full rounded-md flex flex-col justify-start p-3 overflow-y-scroll"
       >
-        <Tabs class="dark h-full" value="0">
+        <Tabs class="h-full" value="0">
           <TabList>
             <Tab value="0">Search Equipment</Tab>
             <Tab value="1">Saved Equipment</Tab>
@@ -299,7 +297,7 @@ const displayedStats = ref({
                   filter
                   placeholder="Select Weapon"
                   :maxSelectedLabels="3"
-                  class="w-fit-content dark"
+                  class="w-fit-content"
                   size="small"
                 >
                 </MultiSelect>
@@ -310,7 +308,7 @@ const displayedStats = ref({
                   filter
                   placeholder="Select Armor"
                   :maxSelectedLabels="3"
-                  class="w-fit-content dark"
+                  class="w-fit-content"
                   size="small"
                 >
                 </MultiSelect>
@@ -321,7 +319,7 @@ const displayedStats = ref({
                   filter
                   placeholder="Select Accessories"
                   :maxSelectedLabels="3"
-                  class="w-fit-content dark"
+                  class="w-fit-content"
                   size="small"
                 >
                 </MultiSelect>
