@@ -36,6 +36,7 @@ import type {
   DemonsGlee,
   SpearOfRot,
   Weapon,
+  Rarity,
 } from '@/typings/equip'
 
 import { Slot } from '@/typings/slot'
@@ -44,6 +45,44 @@ export type WeaponSelect = {
   name: string
   weapons: Weapon[]
 }
+
+export const RARITIES: Rarity[] = [
+  {
+    rarityIndex: 0,
+    color: 'text-poor',
+    name: 'Poor',
+  },
+  {
+    rarityIndex: 1,
+    color: 'text-common',
+    name: 'Common',
+  },
+  {
+    rarityIndex: 2,
+    color: 'text-uncommon',
+    name: 'Uncommon',
+  },
+  {
+    rarityIndex: 3,
+    color: 'text-rare',
+    name: 'Rare',
+  },
+  {
+    rarityIndex: 4,
+    color: 'text-epic',
+    name: 'Epic',
+  },
+  {
+    rarityIndex: 5,
+    color: 'text-legend',
+    name: 'Legend',
+  },
+  {
+    rarityIndex: 6,
+    color: 'text-unique',
+    name: 'Unique',
+  },
+]
 
 export const ARMING_SWORDS: Sword[] = [
   {
@@ -643,7 +682,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
     src: new URL('@/assets/weapons/crystal_ball/90px-Crystal_Ball_1.png', import.meta.url),
     move_speed_reduction: 15,
     magical_damage: 2,
-    addition_physical_weapon_damage: 1,
+    additional_physical_weapon_damage: 1,
     magic_penetration: 10,
     class: [WIZARD.name, WARLOCK.name, DRUID.name],
     slot: Slot.ONEOFF,
@@ -654,7 +693,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
     src: new URL('@/assets/weapons/crystal_ball/90px-Crystal_Ball_2.png', import.meta.url),
     move_speed_reduction: 15,
     magical_damage: 3,
-    addition_physical_weapon_damage: 1,
+    additional_physical_weapon_damage: 1,
     magic_penetration: 10,
     class: [WIZARD.name, WARLOCK.name, DRUID.name],
     slot: Slot.ONEOFF,
@@ -665,7 +704,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
     src: new URL('@/assets/weapons/crystal_ball/90px-Crystal_Ball_3.png', import.meta.url),
     move_speed_reduction: 15,
     magical_damage: 4,
-    addition_physical_weapon_damage: 2,
+    additional_physical_weapon_damage: 2,
     magic_penetration: 10,
     class: [WIZARD.name, WARLOCK.name, DRUID.name],
     slot: Slot.ONEOFF,
@@ -676,7 +715,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
     src: new URL('@/assets/weapons/crystal_ball/90px-Crystal_Ball_4.png', import.meta.url),
     move_speed_reduction: 15,
     magical_damage: 5,
-    addition_physical_weapon_damage: 2,
+    additional_physical_weapon_damage: 2,
     magic_penetration: 10,
     class: [WIZARD.name, WARLOCK.name, DRUID.name],
     slot: Slot.ONEOFF,
@@ -687,7 +726,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
     src: new URL('@/assets/weapons/crystal_ball/90px-Crystal_Ball_5.png', import.meta.url),
     move_speed_reduction: 15,
     magical_damage: 6,
-    addition_physical_weapon_damage: 2,
+    additional_physical_weapon_damage: 2,
     magic_penetration: 10,
     class: [WIZARD.name, WARLOCK.name, DRUID.name],
     slot: Slot.ONEOFF,
@@ -698,7 +737,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
     src: new URL('@/assets/weapons/crystal_ball/90px-Crystal_Ball_6.png', import.meta.url),
     move_speed_reduction: 15,
     magical_damage: 7,
-    addition_physical_weapon_damage: 3,
+    additional_physical_weapon_damage: 3,
     magic_penetration: 10,
     class: [WIZARD.name, WARLOCK.name, DRUID.name],
     slot: Slot.ONEOFF,
@@ -709,7 +748,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
     src: new URL("@/assets/weapons/crystal_ball/90px-Zirkzi's_Eye.png", import.meta.url),
     move_speed_reduction: 15,
     magical_damage: 8,
-    addition_physical_weapon_damage: 3,
+    additional_physical_weapon_damage: 3,
     magic_penetration: 10,
     class: [WIZARD.name, WARLOCK.name, DRUID.name],
     slot: Slot.ONEOFF,
@@ -720,7 +759,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
     src: new URL('@/assets/weapons/crystal_ball/90px-Cyclops_Vision_Crystal.png', import.meta.url),
     move_speed_reduction: 15,
     magical_damage: 6,
-    addition_physical_weapon_damage: 2,
+    additional_physical_weapon_damage: 2,
     magic_penetration: 10,
     dexterity: 2,
     strength: 2,
@@ -734,7 +773,7 @@ export const CRYSTAL_BALLS: (CrystalBall | CyclopsVisionCrystal | ManaSphere)[] 
     src: new URL('@/assets/weapons/crystal_ball/90px-Mana_Sphere.png', import.meta.url),
     move_speed_reduction: 15,
     magical_damage: 6,
-    addition_physical_weapon_damage: 2,
+    additional_physical_weapon_damage: 2,
     true_magical_damage: [1, 2],
     magic_penetration: 10,
     will: 2,

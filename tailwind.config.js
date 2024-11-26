@@ -10,7 +10,6 @@ export default {
         'dnd-white': 'rgb(238, 238, 238)',
         'dnd-blue': '#1F263F',
         'dnd-black': '#191d24b3',
-        junk: 'rgb(50, 50, 50)',
         poor: 'rgb(100, 100, 100)',
         common: 'rgb(222, 222, 222)',
         uncommon: 'rgb(98, 190, 11)',

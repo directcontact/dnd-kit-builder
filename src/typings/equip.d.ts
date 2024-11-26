@@ -65,7 +65,7 @@ export interface CrystalSword extends Weapon {
 
 export interface CrystalBall extends Weapon {
   magical_damage: number
-  addition_physical_weapon_damage: number
+  additional_physical_weapon_damage: number
   magic_penetration: number
 }
 
@@ -152,4 +152,10 @@ export interface GoldenWeapon extends Weapon {
   luck: number
   magical_damage_reduction: number
   crafted?: true
+}
+
+export type Rarity = {
+  rarityIndex: number
+  color: string
+  name: string
 }
