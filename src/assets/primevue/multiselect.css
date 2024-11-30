@@ -53,7 +53,7 @@
 }
 
 .p-multiselect-label-empty {
-  @apply overflow-hidden opacity-0;
+  @apply overflow-hidden;
 }
 
 .p-multiselect .p-multiselect-overlay {

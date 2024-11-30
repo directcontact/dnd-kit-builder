@@ -2,10 +2,10 @@
 import { ref, computed, onMounted } from 'vue'
 import type { WeaponSelect } from '@/lib/weapons'
 import type { Weapon } from '@/typings/equip'
-import { Dialog, Button, Select } from 'primevue'
+import { Dialog, Button, Select, MultiSelect, InputText, Message } from 'primevue'
 import { RARITIES } from '@/lib/weapons'
 import { MODIFIERS } from '@/lib/modifiers'
-import type { CoreModifierSet } from '@/lib/modifiers'
+import type { CoreModifier } from '@/typings/modifier'
 import type { Slot } from '@/typings/slot'
 
 type AttributedModifier = {
@@ -30,7 +30,7 @@ const newEquipmentDetails = ref<EquipmentDetails>({
   modifiers: [],
   weapon: null,
 })
-const currentlySelectedModifier = ref(null)
+const selectedModifiers = ref<CoreModifier[]>([])
 
 const newEquipmentDetailSrc = computed(() => newEquipmentDetails.value.weapon?.src)
 const dialogPotentialModifierList = computed(() => {
@@ -64,10 +64,16 @@ function handleRarityChange(rarity: number) {
   newEquipmentDetails.value.weapon = potentialWeapons.find((weapon) => !weapon.crafted)
 }
 
-function handleAddModifier(modifier: CoreModifier) {
-  currentlySelectedModifier.value = null
-  console.log('huh')
+function handleChangeModifier(modifiers: { name: string; modifier: CoreModifier }[]) {
+  selectedModifiers.value = modifiers.map((modifierSelect) => modifierSelect.modifier)
 }
+
+function handleStatValueChange(
+  value: string | undefined,
+  min: number,
+  max: number,
+  wholeValues: boolean,
+) {}
 
 defineExpose({
   handleCreateEquipment: handleCreateEquipment,
@@ -80,27 +86,70 @@ defineExpose({
     v-model:visible="visible"
     modal
     :header="'Create New ' + (newEquipment ? newEquipment?.name : '')"
-    :style="{ width: '25rem' }"
+    :style="{ width: '50rem' }"
   >
-    <div class="flex items-center flex-row">
+    <div class="flex items-center flex-row mb-3">
       <img :src="newEquipmentDetailSrc" />
-      <div class="flex flex-col mr-3">
-        <div :class="RARITIES[newEquipmentDetails.rarity].color">
-          {{ RARITIES[newEquipmentDetails.rarity].name }}
+      <div class="flex flex-col w-1/2">
+        <div class="flex flex-col mr-3">
+          <div :class="RARITIES[newEquipmentDetails.rarity].color">
+            {{ RARITIES[newEquipmentDetails.rarity].name }}
+          </div>
+          <Select
+            @update:modelValue="handleRarityChange"
+            :modelValue="newEquipmentDetails.rarity"
+            :options="[...Array(7).keys()]"
+            class="w-fit"
+          />
         </div>
-        <Select
-          @update:modelValue="handleRarityChange"
-          :model-value="newEquipmentDetails.rarity"
-          :options="[...Array(7).keys()]"
-        />
+        <div class="flex flex-col">
+          <div :class="RARITIES[newEquipmentDetails.rarity].color">Modifiers</div>
+          <MultiSelect
+            @update:modelValue="handleChangeModifier"
+            optionLabel="name"
+            :options="dialogPotentialModifierList"
+            class="w-fit"
+            selectedItemsLabel="Modifiers on the right"
+            :maxSelectedLabels="0"
+            :selectionLimit="RARITIES[newEquipmentDetails.rarity].modifiers"
+            :disabled="RARITIES[newEquipmentDetails.rarity].modifiers === 0"
+          />
+        </div>
       </div>
-      <div class="flex flex-col">
-        <div :class="RARITIES[newEquipmentDetails.rarity].color">Modifiers</div>
-        <Select
-          @update:modelValue="handleAddModifier"
-          optionLabel="name"
-          :options="dialogPotentialModifierList"
-        />
+      <div class="flex flex-col justify-center items-center w-1/2 space-y-1">
+        <div>{{ newEquipment ? newEquipment?.name : '' }}</div>
+        <div
+          class="flex flex-row justify-center items-center"
+          v-for="selectedModifier of selectedModifiers"
+          v-bind:key="selectedModifier.statName"
+        >
+          <div class="flex flex-col gap-2">
+            <label :for="selectedModifier.stat">{{ selectedModifier.statName }}</label>
+            <InputText
+              :id="selectedModifier.stat"
+              size="small"
+              @update:modelValue="
+                ($event) =>
+                  handleStatValueChange(
+                    $event,
+                    selectedModifier.statValues[0],
+                    selectedModifier.statValues[1],
+                    selectedModifier.wholeValues,
+                  )
+              "
+            />
+            <Message
+              class="border-0 bg-transparent text-black"
+              size="small"
+              severity="secondary"
+              variant="simple"
+            >
+              Range: {{ selectedModifier.statValues[0] }} ~ {{ selectedModifier.statValues[1] }} |
+              Whole Numbers:
+              {{ selectedModifier.wholeValues ? 'Yes' : 'No' }}
+            </Message>
+          </div>
+        </div>
       </div>
     </div>
     <div class="flex justify-end gap-2">

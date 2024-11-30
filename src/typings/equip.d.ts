@@ -158,4 +158,5 @@ export type Rarity = {
   rarityIndex: number
   color: string
   name: string
+  modifiers: number
 }

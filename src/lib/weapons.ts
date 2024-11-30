@@ -51,36 +51,43 @@ export const RARITIES: Rarity[] = [
     rarityIndex: 0,
     color: 'text-poor',
     name: 'Poor',
+    modifiers: 0,
   },
   {
     rarityIndex: 1,
     color: 'text-common',
     name: 'Common',
+    modifiers: 0,
   },
   {
     rarityIndex: 2,
     color: 'text-uncommon',
     name: 'Uncommon',
+    modifiers: 1,
   },
   {
     rarityIndex: 3,
     color: 'text-rare',
     name: 'Rare',
+    modifiers: 2,
   },
   {
     rarityIndex: 4,
     color: 'text-epic',
     name: 'Epic',
+    modifiers: 3,
   },
   {
     rarityIndex: 5,
     color: 'text-legend',
     name: 'Legend',
+    modifiers: 4,
   },
   {
     rarityIndex: 6,
     color: 'text-unique',
     name: 'Unique',
+    modifiers: 5,
   },
 ]
 
